@@ -8,8 +8,13 @@
                 <h4 class="ml-2 mt-2">Adicionar Questões</h4>
             </div>
             <div class="body m-4">
-                <form class="needs-validation" action="{{-- route('admin.question.store') --}}" method="POST">
+                <form enctype="multipart/form-data" class="needs-validation" action="{{ route('admin.questions.store') }}" method="POST">
                     @csrf
+                    <input
+                        type="hidden"
+                        value="{{ $userID }}"
+                        name="reference_id"
+                    >
                     <div class="form-row">
                         <div class="col-md-6 mb-3">
                             <label for="validationCustom01">Digite o conteúdo da questão *</label>
@@ -58,11 +63,11 @@
                                 <label>Selecione a questão correta *</label>
                                 <div class="form-group">
                                     <select name="question_correct" class="custom-select border-dark" required>
-                                        <option value="1" selected>A</option>
-                                        <option value="2">B</option>
-                                        <option value="3">C</option>
-                                        <option value="4">D</option>
-                                        <option value="5">E</option>
+                                        <option value="A">A</option>
+                                        <option value="B">B</option>
+                                        <option value="C">C</option>
+                                        <option value="D">D</option>
+                                        <option value="E">E</option>
                                     </select>
                                 </div>
                             </div>
@@ -74,22 +79,22 @@
                             <label>Dificuldade *</label>
                             <div class="form-group">
                                 <select name="question_difficulty" class="custom-select border-dark" required>
-                                    <option value="1" selected>Fácil</option>
-                                    <option value="2">Médio</option>
-                                    <option value="3">Difícil</option>
+                                    <option value="EASY" selected>Fácil</option>
+                                    <option value="MEDIUM">Médio</option>
+                                    <option value="HARD">Difícil</option>
                                 </select>
                             </div>
                         </div>
                         <div class="col-md-6 mb-3">
                             <label>Selecione a matéria dessa questão *</label>
                             <div class="form-group">
-                                <select name="question_difficulty" class="custom-select border-dark" required>
-                                    <option value="port" selected>Português</option>
-                                    <option value="mat">Matemática</option>
-                                    <option value="cien">Ciências</option>
-                                    <option value="hist">História</option>
-                                    <option value="geo">Geográfia</option>
-                                    <option value="ing">Inglês</option>
+                                <select name="question_subjects" class="custom-select border-dark" required>
+                                    <option value="POR">Português</option>
+                                    <option value="MAT">Matemática</option>
+                                    <option value="CIE">Ciências</option>
+                                    <option value="HIS">História</option>
+                                    <option value="GEO">Geográfia</option>
+                                    <option value="ING">Inglês</option>
                                 </select>
                             </div>
                         </div>

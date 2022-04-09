@@ -41,6 +41,8 @@ Route::middleware(['auth', 'access.pages.admin'])->group(function(){
         // admin/questions
         Route::get('questions', 'Admin\\QuestionController@index')->name('admin.questions.index');
         Route::get('questions/create', 'Admin\\QuestionController@create')->name('admin.questions.create');
+        Route::post('questions', 'Admin\\QuestionController@store')->name('admin.questions.store');
+
     });
 });
 

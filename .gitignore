@@ -1,4 +1,5 @@
 /node_modules
+/public/img/questions
 /public/hot
 /public/storage
 /storage/*.key
