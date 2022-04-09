@@ -88,7 +88,7 @@
 
 /***/ "./node_modules/axios/index.js":
 /*!*************************************!*\
-  !*** ./node_modules/axios/index.js ***!
+  !*** ./node_modules/axios/index.my_js ***!
   \*************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -99,7 +99,7 @@ module.exports = __webpack_require__(/*! ./lib/axios */ "./node_modules/axios/li
 
 /***/ "./node_modules/axios/lib/adapters/xhr.js":
 /*!************************************************!*\
-  !*** ./node_modules/axios/lib/adapters/xhr.js ***!
+  !*** ./node_modules/axios/lib/adapters/xhr.my_js ***!
   \************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -291,7 +291,7 @@ module.exports = function xhrAdapter(config) {
 
 /***/ "./node_modules/axios/lib/axios.js":
 /*!*****************************************!*\
-  !*** ./node_modules/axios/lib/axios.js ***!
+  !*** ./node_modules/axios/lib/axios.my_js ***!
   \*****************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -356,7 +356,7 @@ module.exports.default = axios;
 
 /***/ "./node_modules/axios/lib/cancel/Cancel.js":
 /*!*************************************************!*\
-  !*** ./node_modules/axios/lib/cancel/Cancel.js ***!
+  !*** ./node_modules/axios/lib/cancel/Cancel.my_js ***!
   \*************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -387,7 +387,7 @@ module.exports = Cancel;
 
 /***/ "./node_modules/axios/lib/cancel/CancelToken.js":
 /*!******************************************************!*\
-  !*** ./node_modules/axios/lib/cancel/CancelToken.js ***!
+  !*** ./node_modules/axios/lib/cancel/CancelToken.my_js ***!
   \******************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -456,7 +456,7 @@ module.exports = CancelToken;
 
 /***/ "./node_modules/axios/lib/cancel/isCancel.js":
 /*!***************************************************!*\
-  !*** ./node_modules/axios/lib/cancel/isCancel.js ***!
+  !*** ./node_modules/axios/lib/cancel/isCancel.my_js ***!
   \***************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -473,7 +473,7 @@ module.exports = function isCancel(value) {
 
 /***/ "./node_modules/axios/lib/core/Axios.js":
 /*!**********************************************!*\
-  !*** ./node_modules/axios/lib/core/Axios.js ***!
+  !*** ./node_modules/axios/lib/core/Axios.my_js ***!
   \**********************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -579,7 +579,7 @@ module.exports = Axios;
 
 /***/ "./node_modules/axios/lib/core/InterceptorManager.js":
 /*!***********************************************************!*\
-  !*** ./node_modules/axios/lib/core/InterceptorManager.js ***!
+  !*** ./node_modules/axios/lib/core/InterceptorManager.my_js ***!
   \***********************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -643,7 +643,7 @@ module.exports = InterceptorManager;
 
 /***/ "./node_modules/axios/lib/core/buildFullPath.js":
 /*!******************************************************!*\
-  !*** ./node_modules/axios/lib/core/buildFullPath.js ***!
+  !*** ./node_modules/axios/lib/core/buildFullPath.my_js ***!
   \******************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -675,7 +675,7 @@ module.exports = function buildFullPath(baseURL, requestedURL) {
 
 /***/ "./node_modules/axios/lib/core/createError.js":
 /*!****************************************************!*\
-  !*** ./node_modules/axios/lib/core/createError.js ***!
+  !*** ./node_modules/axios/lib/core/createError.my_js ***!
   \****************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -705,7 +705,7 @@ module.exports = function createError(message, config, code, request, response) 
 
 /***/ "./node_modules/axios/lib/core/dispatchRequest.js":
 /*!********************************************************!*\
-  !*** ./node_modules/axios/lib/core/dispatchRequest.js ***!
+  !*** ./node_modules/axios/lib/core/dispatchRequest.my_js ***!
   \********************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -796,7 +796,7 @@ module.exports = function dispatchRequest(config) {
 
 /***/ "./node_modules/axios/lib/core/enhanceError.js":
 /*!*****************************************************!*\
-  !*** ./node_modules/axios/lib/core/enhanceError.js ***!
+  !*** ./node_modules/axios/lib/core/enhanceError.my_js ***!
   \*****************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -850,7 +850,7 @@ module.exports = function enhanceError(error, config, code, request, response) {
 
 /***/ "./node_modules/axios/lib/core/mergeConfig.js":
 /*!****************************************************!*\
-  !*** ./node_modules/axios/lib/core/mergeConfig.js ***!
+  !*** ./node_modules/axios/lib/core/mergeConfig.my_js ***!
   \****************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -935,7 +935,7 @@ module.exports = function mergeConfig(config1, config2) {
 
 /***/ "./node_modules/axios/lib/core/settle.js":
 /*!***********************************************!*\
-  !*** ./node_modules/axios/lib/core/settle.js ***!
+  !*** ./node_modules/axios/lib/core/settle.my_js ***!
   \***********************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -972,7 +972,7 @@ module.exports = function settle(resolve, reject, response) {
 
 /***/ "./node_modules/axios/lib/core/transformData.js":
 /*!******************************************************!*\
-  !*** ./node_modules/axios/lib/core/transformData.js ***!
+  !*** ./node_modules/axios/lib/core/transformData.my_js ***!
   \******************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -1004,7 +1004,7 @@ module.exports = function transformData(data, headers, fns) {
 
 /***/ "./node_modules/axios/lib/defaults.js":
 /*!********************************************!*\
-  !*** ./node_modules/axios/lib/defaults.js ***!
+  !*** ./node_modules/axios/lib/defaults.my_js ***!
   \********************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -1108,13 +1108,13 @@ utils.forEach(['post', 'put', 'patch'], function forEachMethodWithData(method) {
 
 module.exports = defaults;
 
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../process/browser.js */ "./node_modules/process/browser.js")))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../process/browser.my_js */ "./node_modules/process/browser.js")))
 
 /***/ }),
 
 /***/ "./node_modules/axios/lib/helpers/bind.js":
 /*!************************************************!*\
-  !*** ./node_modules/axios/lib/helpers/bind.js ***!
+  !*** ./node_modules/axios/lib/helpers/bind.my_js ***!
   \************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -1137,7 +1137,7 @@ module.exports = function bind(fn, thisArg) {
 
 /***/ "./node_modules/axios/lib/helpers/buildURL.js":
 /*!****************************************************!*\
-  !*** ./node_modules/axios/lib/helpers/buildURL.js ***!
+  !*** ./node_modules/axios/lib/helpers/buildURL.my_js ***!
   \****************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -1220,7 +1220,7 @@ module.exports = function buildURL(url, params, paramsSerializer) {
 
 /***/ "./node_modules/axios/lib/helpers/combineURLs.js":
 /*!*******************************************************!*\
-  !*** ./node_modules/axios/lib/helpers/combineURLs.js ***!
+  !*** ./node_modules/axios/lib/helpers/combineURLs.my_js ***!
   \*******************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -1246,7 +1246,7 @@ module.exports = function combineURLs(baseURL, relativeURL) {
 
 /***/ "./node_modules/axios/lib/helpers/cookies.js":
 /*!***************************************************!*\
-  !*** ./node_modules/axios/lib/helpers/cookies.js ***!
+  !*** ./node_modules/axios/lib/helpers/cookies.my_js ***!
   \***************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -1311,7 +1311,7 @@ module.exports = (
 
 /***/ "./node_modules/axios/lib/helpers/isAbsoluteURL.js":
 /*!*********************************************************!*\
-  !*** ./node_modules/axios/lib/helpers/isAbsoluteURL.js ***!
+  !*** ./node_modules/axios/lib/helpers/isAbsoluteURL.my_js ***!
   \*********************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -1337,7 +1337,7 @@ module.exports = function isAbsoluteURL(url) {
 
 /***/ "./node_modules/axios/lib/helpers/isURLSameOrigin.js":
 /*!***********************************************************!*\
-  !*** ./node_modules/axios/lib/helpers/isURLSameOrigin.js ***!
+  !*** ./node_modules/axios/lib/helpers/isURLSameOrigin.my_js ***!
   \***********************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -1417,7 +1417,7 @@ module.exports = (
 
 /***/ "./node_modules/axios/lib/helpers/normalizeHeaderName.js":
 /*!***************************************************************!*\
-  !*** ./node_modules/axios/lib/helpers/normalizeHeaderName.js ***!
+  !*** ./node_modules/axios/lib/helpers/normalizeHeaderName.my_js ***!
   \***************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -1441,7 +1441,7 @@ module.exports = function normalizeHeaderName(headers, normalizedName) {
 
 /***/ "./node_modules/axios/lib/helpers/parseHeaders.js":
 /*!********************************************************!*\
-  !*** ./node_modules/axios/lib/helpers/parseHeaders.js ***!
+  !*** ./node_modules/axios/lib/helpers/parseHeaders.my_js ***!
   \********************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -1506,7 +1506,7 @@ module.exports = function parseHeaders(headers) {
 
 /***/ "./node_modules/axios/lib/helpers/spread.js":
 /*!**************************************************!*\
-  !*** ./node_modules/axios/lib/helpers/spread.js ***!
+  !*** ./node_modules/axios/lib/helpers/spread.my_js ***!
   \**************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -1519,7 +1519,7 @@ module.exports = function parseHeaders(headers) {
  *
  * Common use case would be to use `Function.prototype.apply`.
  *
- *  ```js
+ *  ```my_js
  *  function f(x, y, z) {}
  *  var args = [1, 2, 3];
  *  f.apply(null, args);
@@ -1527,7 +1527,7 @@ module.exports = function parseHeaders(headers) {
  *
  * With `spread` this example can be re-written.
  *
- *  ```js
+ *  ```my_js
  *  spread(function(x, y, z) {})([1, 2, 3]);
  *  ```
  *
@@ -1545,7 +1545,7 @@ module.exports = function spread(callback) {
 
 /***/ "./node_modules/axios/lib/utils.js":
 /*!*****************************************!*\
-  !*** ./node_modules/axios/lib/utils.js ***!
+  !*** ./node_modules/axios/lib/utils.my_js ***!
   \*****************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -1803,7 +1803,7 @@ function forEach(obj, fn) {
  *
  * Example:
  *
- * ```js
+ * ```my_js
  * var result = merge({foo: 123}, {foo: 456});
  * console.log(result.foo); // outputs 456
  * ```
@@ -1901,7 +1901,7 @@ module.exports = {
 
 /***/ "./node_modules/bootstrap/dist/js/bootstrap.js":
 /*!*****************************************************!*\
-  !*** ./node_modules/bootstrap/dist/js/bootstrap.js ***!
+  !*** ./node_modules/bootstrap/dist/my_js/bootstrap.my_js ***!
   \*****************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -1912,7 +1912,7 @@ module.exports = {
   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
   */
 (function (global, factory) {
-   true ? factory(exports, __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js"), __webpack_require__(/*! popper.js */ "./node_modules/popper.js/dist/esm/popper.js")) :
+   true ? factory(exports, __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js"), __webpack_require__(/*! popper.my_js */ "./node_modules/popper.js/dist/esm/popper.js")) :
   undefined;
 })(this, (function (exports, $, Popper) { 'use strict';
 
@@ -1973,7 +1973,7 @@ module.exports = {
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v4.6.1): util.js
+   * Bootstrap (v4.6.1): util.my_js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -4344,7 +4344,7 @@ module.exports = {
       }
     } // ----------------------------------------------------------------------
     // the following methods are used to handle overflowing modals
-    // todo (fat): these should probably be refactored out of modal.js
+    // todo (fat): these should probably be refactored out of modal.my_js
     // ----------------------------------------------------------------------
     ;
 
@@ -4521,7 +4521,7 @@ module.exports = {
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v4.6.1): tools/sanitizer.js
+   * Bootstrap (v4.6.1): tools/sanitizer.my_js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -5418,7 +5418,7 @@ module.exports = {
     };
 
     _proto.setContent = function setContent() {
-      var $tip = $__default["default"](this.getTipElement()); // We use append for html objects to maintain js events
+      var $tip = $__default["default"](this.getTipElement()); // We use append for html objects to maintain my_js events
 
       this.setElementContent($tip.find(SELECTOR_TITLE), this.getTitle());
 
@@ -6261,14 +6261,14 @@ module.exports = {
   Object.defineProperty(exports, '__esModule', { value: true });
 
 }));
-//# sourceMappingURL=bootstrap.js.map
+//# sourceMappingURL=bootstrap.my_js.map
 
 
 /***/ }),
 
 /***/ "./node_modules/jquery/dist/jquery.js":
 /*!********************************************!*\
-  !*** ./node_modules/jquery/dist/jquery.js ***!
+  !*** ./node_modules/jquery/dist/jquery.my_js ***!
   \********************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -6277,7 +6277,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
  * jQuery JavaScript Library v3.6.0
  * https://jquery.com/
  *
- * Includes Sizzle.js
+ * Includes Sizzle.my_js
  * https://sizzlejs.com/
  *
  * Copyright OpenJS Foundation and other contributors
@@ -6295,7 +6295,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
 		// For CommonJS and CommonJS-like environments where a proper `window`
 		// is present, execute the factory and get jQuery.
 		// For environments that do not have a `window` with a `document`
-		// (such as Node.js), expose a factory as module.exports.
+		// (such as Node.my_js), expose a factory as module.exports.
 		// This accentuates the need for the creation of a real `window`.
 		// e.g. var jQuery = require("jquery")(window);
 		// See ticket #14549 for more info.
@@ -15293,7 +15293,7 @@ var
 	rprotocol = /^\/\//,
 
 	/* Prefilters
-	 * 1) They are useful to introduce custom dataTypes (see ajax/jsonp.js for an example)
+	 * 1) They are useful to introduce custom dataTypes (see ajax/jsonp.my_js for an example)
 	 * 2) These are called:
 	 *    - BEFORE asking for a transport
 	 *    - AFTER param serialization (s.data is a string if s.processData is true)
@@ -17161,7 +17161,7 @@ return jQuery;
 
 /***/ "./node_modules/lodash/lodash.js":
 /*!***************************************!*\
-  !*** ./node_modules/lodash/lodash.js ***!
+  !*** ./node_modules/lodash/lodash.my_js ***!
   \***************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -17171,7 +17171,7 @@ return jQuery;
  * Lodash <https://lodash.com/>
  * Copyright OpenJS Foundation and other contributors <https://openjsf.org/>
  * Released under MIT license <https://lodash.com/license>
- * Based on Underscore.js 1.8.3 <http://underscorejs.org/LICENSE>
+ * Based on Underscore.my_js 1.8.3 <http://underscorejs.org/LICENSE>
  * Copyright Jeremy Ashkenas, DocumentCloud and Investigative Reporters & Editors
  */
 ;(function() {
@@ -17186,7 +17186,7 @@ return jQuery;
   var LARGE_ARRAY_SIZE = 200;
 
   /** Error message constants. */
-  var CORE_ERROR_TEXT = 'Unsupported core-js use. Try https://npms.io/search?q=ponyfill.',
+  var CORE_ERROR_TEXT = 'Unsupported core-my_js use. Try https://npms.io/search?q=ponyfill.',
       FUNC_ERROR_TEXT = 'Expected a function',
       INVALID_TEMPL_VAR_ERROR_TEXT = 'Invalid `variable` option passed into `_.template`';
 
@@ -17594,7 +17594,7 @@ return jQuery;
   var freeParseFloat = parseFloat,
       freeParseInt = parseInt;
 
-  /** Detect free variable `global` from Node.js. */
+  /** Detect free variable `global` from Node.my_js. */
   var freeGlobal = typeof global == 'object' && global && global.Object === Object && global;
 
   /** Detect free variable `self`. */
@@ -17612,25 +17612,25 @@ return jQuery;
   /** Detect the popular CommonJS extension `module.exports`. */
   var moduleExports = freeModule && freeModule.exports === freeExports;
 
-  /** Detect free variable `process` from Node.js. */
+  /** Detect free variable `process` from Node.my_js. */
   var freeProcess = moduleExports && freeGlobal.process;
 
-  /** Used to access faster Node.js helpers. */
+  /** Used to access faster Node.my_js helpers. */
   var nodeUtil = (function() {
     try {
-      // Use `util.types` for Node.js 10+.
+      // Use `util.types` for Node.my_js 10+.
       var types = freeModule && freeModule.require && freeModule.require('util').types;
 
       if (types) {
         return types;
       }
 
-      // Legacy `process.binding('util')` for Node.js < 10.
+      // Legacy `process.binding('util')` for Node.my_js < 10.
       return freeProcess && freeProcess.binding && freeProcess.binding('util');
     } catch (e) {}
   }());
 
-  /* Node.js helper references. */
+  /* Node.my_js helper references. */
   var nodeIsArrayBuffer = nodeUtil && nodeUtil.isArrayBuffer,
       nodeIsDate = nodeUtil && nodeUtil.isDate,
       nodeIsMap = nodeUtil && nodeUtil.isMap,
@@ -18610,7 +18610,7 @@ return jQuery;
    * lodash.isFunction(lodash.bar);
    * // => true
    *
-   * // Create a suped-up `defer` in Node.js.
+   * // Create a suped-up `defer` in Node.my_js.
    * var defer = _.runInContext({ 'setTimeout': setImmediate }).defer;
    */
   var runInContext = (function runInContext(context) {
@@ -18632,7 +18632,7 @@ return jQuery;
         funcProto = Function.prototype,
         objectProto = Object.prototype;
 
-    /** Used to detect overreaching core-js shims. */
+    /** Used to detect overreaching core-my_js shims. */
     var coreJsData = context['__core-js_shared__'];
 
     /** Used to resolve the decompiled source of functions. */
@@ -19604,7 +19604,7 @@ return jQuery;
             !(skipIndexes && (
                // Safari 9 has enumerable `arguments.length` in strict mode.
                key == 'length' ||
-               // Node.js 0.10 has enumerable non-index properties on buffers.
+               // Node.my_js 0.10 has enumerable non-index properties on buffers.
                (isBuff && (key == 'offset' || key == 'parent')) ||
                // PhantomJS 2 has enumerable non-index properties on typed arrays.
                (isType && (key == 'buffer' || key == 'byteLength' || key == 'byteOffset')) ||
@@ -20439,7 +20439,7 @@ return jQuery;
     }
 
     /**
-     * The base implementation of `_.isArrayBuffer` without Node.js optimizations.
+     * The base implementation of `_.isArrayBuffer` without Node.my_js optimizations.
      *
      * @private
      * @param {*} value The value to check.
@@ -20450,7 +20450,7 @@ return jQuery;
     }
 
     /**
-     * The base implementation of `_.isDate` without Node.js optimizations.
+     * The base implementation of `_.isDate` without Node.my_js optimizations.
      *
      * @private
      * @param {*} value The value to check.
@@ -20544,7 +20544,7 @@ return jQuery;
     }
 
     /**
-     * The base implementation of `_.isMap` without Node.js optimizations.
+     * The base implementation of `_.isMap` without Node.my_js optimizations.
      *
      * @private
      * @param {*} value The value to check.
@@ -20625,7 +20625,7 @@ return jQuery;
     }
 
     /**
-     * The base implementation of `_.isRegExp` without Node.js optimizations.
+     * The base implementation of `_.isRegExp` without Node.my_js optimizations.
      *
      * @private
      * @param {*} value The value to check.
@@ -20636,7 +20636,7 @@ return jQuery;
     }
 
     /**
-     * The base implementation of `_.isSet` without Node.js optimizations.
+     * The base implementation of `_.isSet` without Node.my_js optimizations.
      *
      * @private
      * @param {*} value The value to check.
@@ -20647,7 +20647,7 @@ return jQuery;
     }
 
     /**
-     * The base implementation of `_.isTypedArray` without Node.js optimizations.
+     * The base implementation of `_.isTypedArray` without Node.my_js optimizations.
      *
      * @private
      * @param {*} value The value to check.
@@ -23275,7 +23275,7 @@ return jQuery;
      */
     var getTag = baseGetTag;
 
-    // Fallback for data views, maps, sets, and weak maps in IE 11 and promises in Node.js < 6.
+    // Fallback for data views, maps, sets, and weak maps in IE 11 and promises in Node.my_js < 6.
     if ((DataView && getTag(new DataView(new ArrayBuffer(1))) != dataViewTag) ||
         (Map && getTag(new Map) != mapTag) ||
         (Promise && getTag(Promise.resolve()) != promiseTag) ||
@@ -29136,12 +29136,12 @@ return jQuery;
      * Checks if `value` is a pristine native function.
      *
      * **Note:** This method can't reliably detect native functions in the presence
-     * of the core-js package because core-js circumvents this kind of detection.
-     * Despite multiple requests, the core-js maintainer has made it clear: any
+     * of the core-my_js package because core-my_js circumvents this kind of detection.
+     * Despite multiple requests, the core-my_js maintainer has made it clear: any
      * attempt to fix the detection will be obstructed. As a result, we're left
      * with little choice but to throw an error. Unfortunately, this also affects
      * packages, like [babel-polyfill](https://www.npmjs.com/package/babel-polyfill),
-     * which rely on core-js.
+     * which rely on core-my_js.
      *
      * @static
      * @memberOf _
@@ -31997,7 +31997,7 @@ return jQuery;
      *
      * // Use the `source` property to inline compiled templates for meaningful
      * // line numbers in error messages and stack traces.
-     * fs.writeFileSync(path.join(process.cwd(), 'jst.js'), '\
+     * fs.writeFileSync(path.join(process.cwd(), 'jst.my_js'), '\
      *   var JST = {\
      *     "main": ' + _.template(mainText).source + '\
      *   };\
@@ -32006,7 +32006,7 @@ return jQuery;
     function template(string, options, guard) {
       // Based on John Resig's `tmpl` implementation
       // (http://ejohn.org/blog/javascript-micro-templating/)
-      // and Laura Doktorova's doT.js (https://github.com/olado/doT).
+      // and Laura Doktorova's doT.my_js (https://github.com/olado/doT).
       var settings = lodash.templateSettings;
 
       if (guard && isIterateeCall(string, options, guard)) {
@@ -34349,7 +34349,7 @@ return jQuery;
   // Export lodash.
   var _ = runInContext();
 
-  // Some AMD build optimizers, like r.js, check for condition patterns like:
+  // Some AMD build optimizers, like r.my_js, check for condition patterns like:
   if (true) {
     // Expose Lodash on the global object to prevent errors when Lodash is
     // loaded by a script tag in the presence of an AMD loader.
@@ -34368,13 +34368,13 @@ return jQuery;
   else {}
 }.call(this));
 
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../webpack/buildin/global.js */ "./node_modules/webpack/buildin/global.js"), __webpack_require__(/*! ./../webpack/buildin/module.js */ "./node_modules/webpack/buildin/module.js")(module)))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../webpack/buildin/global.my_js */ "./node_modules/webpack/buildin/global.js"), __webpack_require__(/*! ./../webpack/buildin/module.my_js */ "./node_modules/webpack/buildin/module.js")(module)))
 
 /***/ }),
 
 /***/ "./node_modules/popper.js/dist/esm/popper.js":
 /*!***************************************************!*\
-  !*** ./node_modules/popper.js/dist/esm/popper.js ***!
+  !*** ./node_modules/popper.my_js/dist/esm/popper.my_js ***!
   \***************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -35580,7 +35580,7 @@ function applyStyle(data) {
  * @memberof Popper.modifiers
  * @param {HTMLElement} reference - The reference element used to position the popper
  * @param {HTMLElement} popper - The HTML element used as popper
- * @param {Object} options - Popper.js options
+ * @param {Object} options - Popper.my_js options
  */
 function applyStyleOnLoad(reference, popper, options, modifierOptions, state) {
   // compute reference element offsets
@@ -35663,13 +35663,13 @@ function computeStyle(data, options) {
       y = options.y;
   var popper = data.offsets.popper;
 
-  // Remove this legacy support in Popper.js v2
+  // Remove this legacy support in Popper.my_js v2
 
   var legacyGpuAccelerationOption = find(data.instance.modifiers, function (modifier) {
     return modifier.name === 'applyStyle';
   }).gpuAcceleration;
   if (legacyGpuAccelerationOption !== undefined) {
-    console.warn('WARNING: `gpuAcceleration` option moved to `computeStyle` modifier and will not be supported in future versions of Popper.js!');
+    console.warn('WARNING: `gpuAcceleration` option moved to `computeStyle` modifier and will not be supported in future versions of Popper.my_js!');
   }
   var gpuAcceleration = legacyGpuAccelerationOption !== undefined ? legacyGpuAccelerationOption : options.gpuAcceleration;
 
@@ -36417,7 +36417,7 @@ function inner(data) {
 
 /**
  * Modifiers are plugins used to alter the behavior of your poppers.<br />
- * Popper.js uses a set of 9 modifiers to provide all the basic functionalities
+ * Popper.my_js uses a set of 9 modifiers to provide all the basic functionalities
  * needed by the library.
  *
  * Usually you don't want to override the `order`, `fn` and `onLoad` props.
@@ -36676,7 +36676,7 @@ var modifiers = {
    * in case you need to replace `applyStyle` with a custom implementation.
    *
    * This modifier has `850` as `order` value to maintain backward compatibility
-   * with previous versions of Popper.js. Expect the modifiers ordering method
+   * with previous versions of Popper.my_js. Expect the modifiers ordering method
    * to change in future major versions of the library.
    *
    * @memberof modifiers
@@ -36713,11 +36713,11 @@ var modifiers = {
    * Applies the computed styles to the popper element.
    *
    * All the DOM manipulations are limited to this modifier. This is useful in case
-   * you want to integrate Popper.js inside a framework or view library and you
+   * you want to integrate Popper.my_js inside a framework or view library and you
    * want to delegate all the DOM manipulations to it.
    *
    * Note that if you disable this modifier, you must make sure the popper element
-   * has its position set to `absolute` before Popper.js can do its work!
+   * has its position set to `absolute` before Popper.my_js can do its work!
    *
    * Just disable this modifier and define your own to achieve the desired effect.
    *
@@ -36744,10 +36744,10 @@ var modifiers = {
 };
 
 /**
- * The `dataObject` is an object containing all the information used by Popper.js.
+ * The `dataObject` is an object containing all the information used by Popper.my_js.
  * This object is passed to modifiers and to the `onCreate` and `onUpdate` callbacks.
  * @name dataObject
- * @property {Object} data.instance The Popper.js instance
+ * @property {Object} data.instance The Popper.my_js instance
  * @property {String} data.placement Placement applied to popper
  * @property {String} data.originalPlacement Placement originally defined on init
  * @property {Boolean} data.flipped True if popper has been flipped by flip modifier
@@ -36763,8 +36763,8 @@ var modifiers = {
  */
 
 /**
- * Default options provided to Popper.js constructor.<br />
- * These can be overridden using the `options` argument of Popper.js.<br />
+ * Default options provided to Popper.my_js constructor.<br />
+ * These can be overridden using the `options` argument of Popper.my_js.<br />
  * To override an option, simply pass an object with the same
  * structure of the `options` object, as the 3rd argument. For example:
  * ```
@@ -36807,7 +36807,7 @@ var Defaults = {
   /**
    * Callback called when the popper is created.<br />
    * By default, it is set to no-op.<br />
-   * Access Popper.js instance with `data.instance`.
+   * Access Popper.my_js instance with `data.instance`.
    * @prop {onCreate}
    */
   onCreate: function onCreate() {},
@@ -36817,14 +36817,14 @@ var Defaults = {
    * on the initialization/creation of the popper, but only on subsequent
    * updates.<br />
    * By default, it is set to no-op.<br />
-   * Access Popper.js instance with `data.instance`.
+   * Access Popper.my_js instance with `data.instance`.
    * @prop {onUpdate}
    */
   onUpdate: function onUpdate() {},
 
   /**
    * List of modifiers used to modify the offsets before they are applied to the popper.
-   * They provide most of the functionalities of Popper.js.
+   * They provide most of the functionalities of Popper.my_js.
    * @prop {modifiers}
    */
   modifiers: modifiers
@@ -36844,12 +36844,12 @@ var Defaults = {
 // Methods
 var Popper = function () {
   /**
-   * Creates a new Popper.js instance.
+   * Creates a new Popper.my_js instance.
    * @class Popper
    * @param {Element|referenceObject} reference - The reference element used to position the popper
    * @param {Element} popper - The HTML / XML element used as the popper
    * @param {Object} options - Your custom options to override the ones defined in [Defaults](#defaults)
-   * @return {Object} instance - The generated Popper.js instance
+   * @return {Object} instance - The generated Popper.my_js instance
    */
   function Popper(reference, popper) {
     var _this = this;
@@ -36895,7 +36895,7 @@ var Popper = function () {
       return a.order - b.order;
     });
 
-    // modifiers have the ability to execute arbitrary code when Popper.js get inited
+    // modifiers have the ability to execute arbitrary code when Popper.my_js get inited
     // such code is executed in the same order of its modifier
     // they could add new properties to their options configuration
     // BE AWARE: don't add options to `options.modifiers.name` but to `modifierOptions`!
@@ -36952,7 +36952,7 @@ var Popper = function () {
     /**
      * Collection of utilities useful when writing custom modifiers.
      * Starting from version 1.7, this method is available only if you
-     * include `popper-utils.js` before `popper.js`.
+     * include `popper-utils.my_js` before `popper.my_js`.
      *
      * **DEPRECATION**: This way to access PopperUtils is deprecated
      * and will be removed in v2! Use the PopperUtils module directly instead.
@@ -36971,7 +36971,7 @@ var Popper = function () {
 }();
 
 /**
- * The `referenceObject` is an object that provides an interface compatible with Popper.js
+ * The `referenceObject` is an object that provides an interface compatible with Popper.my_js
  * and lets you use it as replacement of a real DOM node.<br />
  * You can use this method to position a popper relatively to a set of coordinates
  * in case you don't have a DOM node to use as reference.
@@ -36996,15 +36996,15 @@ Popper.placements = placements;
 Popper.Defaults = Defaults;
 
 /* harmony default export */ __webpack_exports__["default"] = (Popper);
-//# sourceMappingURL=popper.js.map
+//# sourceMappingURL=popper.my_js.map
 
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../webpack/buildin/global.js */ "./node_modules/webpack/buildin/global.js")))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../webpack/buildin/global.my_js */ "./node_modules/webpack/buildin/global.js")))
 
 /***/ }),
 
 /***/ "./node_modules/process/browser.js":
 /*!*****************************************!*\
-  !*** ./node_modules/process/browser.js ***!
+  !*** ./node_modules/process/browser.my_js ***!
   \*****************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
@@ -37199,7 +37199,7 @@ process.umask = function() { return 0; };
 
 /***/ "./node_modules/webpack/buildin/global.js":
 /*!***********************************!*\
-  !*** (webpack)/buildin/global.js ***!
+  !*** (webpack)/buildin/global.my_js ***!
   \***********************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
@@ -37230,7 +37230,7 @@ module.exports = g;
 
 /***/ "./node_modules/webpack/buildin/module.js":
 /*!***********************************!*\
-  !*** (webpack)/buildin/module.js ***!
+  !*** (webpack)/buildin/module.my_js ***!
   \***********************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
@@ -37263,7 +37263,7 @@ module.exports = function(module) {
 
 /***/ "./resources/js/app.js":
 /*!*****************************!*\
-  !*** ./resources/js/app.js ***!
+  !*** ./resources/my_js/app.my_js ***!
   \*****************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -37274,7 +37274,7 @@ __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
 /***/ "./resources/js/bootstrap.js":
 /*!***********************************!*\
-  !*** ./resources/js/bootstrap.js ***!
+  !*** ./resources/my_js/bootstrap.my_js ***!
   \***********************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -37287,7 +37287,7 @@ window._ = __webpack_require__(/*! lodash */ "./node_modules/lodash/lodash.js");
  */
 
 try {
-  window.Popper = __webpack_require__(/*! popper.js */ "./node_modules/popper.js/dist/esm/popper.js")["default"];
+  window.Popper = __webpack_require__(/*! popper.my_js */ "./node_modules/popper.js/dist/esm/popper.js")["default"];
   window.$ = window.jQuery = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
 
   __webpack_require__(/*! bootstrap */ "./node_modules/bootstrap/dist/js/bootstrap.js");
@@ -37307,7 +37307,7 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
  * allows your team to easily build robust real-time web applications.
  */
 // import Echo from 'laravel-echo';
-// window.Pusher = require('pusher-js');
+// window.Pusher = require('pusher-my_js');
 // window.Echo = new Echo({
 //     broadcaster: 'pusher',
 //     key: process.env.MIX_PUSHER_APP_KEY,
@@ -37330,12 +37330,12 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
 /***/ 0:
 /*!*************************************************************!*\
-  !*** multi ./resources/js/app.js ./resources/sass/app.scss ***!
+  !*** multi ./resources/my_js/app.my_js ./resources/sass/app.scss ***!
   \*************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\Users\eduar\OneDrive\Documentos\Code\educ_infinity_v6\resources\js\app.js */"./resources/js/app.js");
+__webpack_require__(/*! C:\Users\eduar\OneDrive\Documentos\Code\educ_infinity_v6\resources\my_js\app.my_js */"./resources/js/app.js");
 module.exports = __webpack_require__(/*! C:\Users\eduar\OneDrive\Documentos\Code\educ_infinity_v6\resources\sass\app.scss */"./resources/sass/app.scss");
 
 

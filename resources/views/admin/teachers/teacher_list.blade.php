@@ -35,7 +35,7 @@
                                     <td>{{ $teacher->class }}º Ano</td>
                                     <td class="text-center">
                                         <a class="btn my-btn-edit border border-dark mr-1" href="{{ route('admin.teachers.edit', $teacher->id), '/edit' }}"><i class="fa-solid fa-pen-to-square mr-2"></i>Editar</a>
-                                        <a class="btn my-btn-delete border border-dark ml-1" href="{{ route('admin.teachers.destroy', $teacher->id), '/remove' }}"><i class="fa-solid fa-trash mr-2"></i>Excluir</a>
+                                        <a id="deleteOption" class="btn my-btn-delete border border-dark ml-1" href="{{ route('admin.teachers.destroy', $teacher->id), '/remove' }}"><i class="fa-solid fa-trash mr-2"></i>Excluir</a>
                                     </td>
                                 </tr>
                             @endforeach

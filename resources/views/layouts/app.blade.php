@@ -17,7 +17,6 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/toastr.css') }}" rel="stylesheet">
     <link href="{{ asset('assets/css/global.css') }}" rel="stylesheet">
-    <!-- @toastr_css -->
 
     <!-- Font awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -92,7 +91,7 @@
                                 Bem-vindo(a), <b>{{ Auth::user()->name }}</b>
                             </a>
 
-                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown" id="dropdown-show">
                                 <a class="dropdown-item" href="">
                                     <i class="fa-solid fa-user"></i>
                                     {{ __('Perfil') }}
@@ -122,12 +121,13 @@
 </div>
 
     <!-- Scripts -->
-    @jquery
-    @toastr_js
+    <script src="{{ asset('js/jquery_3_1_1.min.js') }}"></script>
+    <script src="{{ asset('js/popper.min.js') }}"></script>
+    <script src="{{ asset('js/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('js/toastr.min.js') }}"></script>
     @toastr_render
 
     <!-- My-Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
 
 </body>
 </html>
