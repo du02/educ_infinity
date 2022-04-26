@@ -15,7 +15,7 @@ class TeacherController extends Controller
         $admin = Auth::id();
         $teachers = User::where('roles', 'TEACHER')
                         ->where('reference_id_admin', $admin)
-                        ->get();
+                        ->paginate(5);
 
         return view('admin.teachers.teacher_list', compact('teachers'));
     }

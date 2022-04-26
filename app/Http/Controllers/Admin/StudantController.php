@@ -15,7 +15,7 @@ class StudantController extends Controller
         $admin = Auth::id();
         $studants = User::where('roles', 'STUDANT')
                         ->where('reference_id_admin', $admin)
-                        ->get();
+                        ->paginate(5);
 
         return view('admin.studants.studant_list', compact('studants'));
     }
