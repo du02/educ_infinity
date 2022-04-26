@@ -19,29 +19,30 @@
                         <thead class="">
                         <tr>
                             <th scope="col" class="text-center">#</th>
-                            <th scope="col">Nome</th>
-                            <th scope="col">Último</th>
-                            <th scope="col">Último</th>
-                            <th scope="col">Último</th>
-                            <th scope="col">Nickname</th>
+                            <th scope="col">Disciplina</th>
+                            <th scope="col">Questão</th>
+                            <th scope="col">Data / Hora</th>
                             <th scope="col" class="text-center"></th>
                         </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <th scope="row" class="text-center">1</th>
-                                <td>Mark</td>
-                                <td>Otto</td>
-                                <td>@mdo</td>
-                                <td>@mdo</td>
-                                <td>@mdo</td>
-                                <td class="text-right">
-                                    <a class="btn my-btn-edit border border-dark mr-1" href=""><i class="fa-solid fa-pen-to-square mr-2"></i>Editar</a>
-                                    <a class="btn my-btn-delete border border-dark ml-1" href=""><i class="fa-solid fa-trash mr-2"></i>Excluir</a>
-                                </td>
-                            </tr>
+                            @foreach($questions as $question)
+                                <tr>
+                                    <th scope="row" class="text-center">{{ $loop->iteration }}</th>
+                                    <td>{{ $question->question_subjects }}</td>
+                                    <td>{{ Str::limit($question->content_question, 70) }}</td>
+                                    <td>{{ $question->updated_at }}</td>
+                                    <td class="text-right">
+                                        <a class="btn my-btn-edit border border-dark mr-1" href=""><i class="fa-solid fa-pen-to-square mr-2"></i>Editar</a>
+                                        <a class="btn my-btn-delete border border-dark ml-1" href=""><i class="fa-solid fa-trash mr-2"></i>Excluir</a>
+                                    </td>
+                                </tr>
+                            @endforeach
                         </tbody>
                     </table>
+                    <div class="d-flex justify-content-center">
+                        {{ $questions->links() }}
+                    </div>
                 </div>
             </div>
         </div>

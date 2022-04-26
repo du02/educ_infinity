@@ -12,7 +12,12 @@ class QuestionController extends Controller
 {
     public function index()
     {
-        return view('admin.questions.question_list');
+        $admin = Auth::id();
+        $questions = Question::where('reference_id', $admin)
+                    ->orderBy('updated_at', 'desc')
+                    ->paginate(5);
+
+        return view('admin.questions.question_list', compact('questions'));
     }
 
     public function create()
