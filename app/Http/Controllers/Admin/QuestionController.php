@@ -64,7 +64,6 @@ class QuestionController extends Controller
             toastr()->error('Não foi possível adicionar os dados!')
             ->warning($err->getMessage());
             return redirect()->route('admin.questions.index');
-
         }
     }
 
@@ -75,17 +74,63 @@ class QuestionController extends Controller
 
     public function edit($id)
     {
-        //
+        $userID = Auth::id();
+        $question = Question::find($id);
+
+        return view('admin.questions.question_edit', compact('userID', 'question'));
     }
 
     public function update(Request $request, $id)
     {
-        //
+        try {
+            $data = $request->all();
+
+            // validation image
+            if($request->hasFile('question_img') && $request->file('question_img')->isValid())
+            {
+                $dataImg = $request->file('question_img');
+                $imageName = md5($dataImg->getClientOriginalName() . strtotime('now')) . '.' . $dataImg->extension();
+
+                // save in paste
+                $dataImg->move(public_path('img/questions'), $imageName);
+
+                // image new name
+                $data['question_img'] = $imageName;
+            } else {
+                $data['question_img'] = '';
+            }
+
+            // create question
+            $question = Question::findOrfail($id);
+            $question->update($data);
+
+            toastr()->success('Editado com Sucesso!');
+            return redirect()->route('admin.questions.index');
+
+        } catch (Exception $err) {
+            toastr()->error('Não foi possível Editar os dados!')
+                    ->warning($err->getMessage());
+            return redirect()->route('admin.questions.index');
+        }
     }
 
     public function destroy($id)
     {
-        //
+        try {
+
+            $question = Question::FindOrfail($id);
+            $question->delete();
+
+            toastr()->success('Removido com Sucesso!');
+            return redirect()->route('admin.questions.index');
+
+        } catch (Exception $err) {
+
+            toastr()->error('Não foi possível Remover os dados!')
+                    ->warning($err->getMessage());
+            return redirect()->route('admin.questions.index');
+
+        }
     }
 
     public function createCodeResort($role, $id)

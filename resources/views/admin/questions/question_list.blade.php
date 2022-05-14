@@ -33,8 +33,8 @@
                                     <td>{{ Str::limit($question->content_question, 50) }}</td>
                                     <td>{{ $question->updated_at }}</td>
                                     <td class="text-right">
-                                        <a class="btn my-btn-edit border border-dark mr-1" href=""><i class="fa-solid fa-pen-to-square mr-2"></i>Editar</a>
-                                        <a class="btn my-btn-delete border border-dark ml-1" href=""><i class="fa-solid fa-trash mr-2"></i>Excluir</a>
+                                        <a class="btn my-btn-edit border border-dark mr-1" href="{{ route('admin.questions.edit', $question->id) }}"><i class="fa-solid fa-pen-to-square mr-2"></i>Editar</a>
+                                        <a class="btn my-btn-delete border border-dark ml-1" href="{{ route('admin.questions.destroy', $question->id) }}"><i class="fa-solid fa-trash mr-2"></i>Excluir</a>
                                     </td>
                                 </tr>
                             @endforeach

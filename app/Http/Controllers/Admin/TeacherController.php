@@ -56,10 +56,7 @@ class TeacherController extends Controller
 
     public function edit($id)
     {
-        $admin = Auth::id();
-        $teacher = User::find($id);
 
-        return view('admin.teachers.teacher_edit', compact('teacher', 'admin'));
     }
 
     public function update(Request $request, $id)

@@ -8,7 +8,7 @@
                 <h4 class="ml-2 mt-2">Adicionar Questões</h4>
             </div>
             <div class="body m-4">
-                <form enctype="multipart/form-data" class="needs-validation" action="{{ route('admin.questions.store') }}" method="POST">
+                <form enctype="multipart/form-data" class="needs-validation" action="{{ route('admin.questions.update', $question->id) }}" method="POST">
                     @csrf
                     <input
                         type="hidden"
@@ -17,14 +17,20 @@
                     >
                     <input
                         type="hidden"
-                        value=""
+                        value="{{ $question->code_question }}"
                         name="code_question"
                     >
                     <div class="form-row">
                         <div class="col-md-6 mb-3">
                             <label for="validationCustom01">Digite o conteúdo da questão *</label>
-                            <textarea name="content_question" class="form-control border-dark"
-                                      id="exampleFormControlTextarea1" rows="12" required></textarea>
+                            <textarea
+                                name="content_question"
+                                class="form-control border-dark"
+                                id="exampleFormControlTextarea1"
+                                rows="12"
+                                required>
+                                {{ $question->content_question }}
+                            </textarea>
                         </div>
                         <div class="col-md-6 mb-3">
                             <label for="validationCustom02">Digite as opções das questões *</label>
@@ -32,47 +38,72 @@
                                 <div class="input-group-prepend">
                                     <div class="input-group-text border-dark">A</div>
                                 </div>
-                                <input name="option_question_a" type="text" class="form-control border-dark"
-                                       id="inlineFormInputGroup">
+                                <input
+                                    name="option_question_a"
+                                    type="text"
+                                    class="form-control border-dark"
+                                    id="inlineFormInputGroup"
+                                    value="{{ $question->option_question_a }}"
+                                >
                             </div>
                             <div class="input-group mb-2">
                                 <div class="input-group-prepend">
                                     <div class="input-group-text border-dark">B</div>
                                 </div>
-                                <input name="option_question_b" type="text" class="form-control border-dark"
-                                       id="inlineFormInputGroup">
+                                <input
+                                    name="option_question_b"
+                                    type="text"
+                                    class="form-control border-dark"
+                                    id="inlineFormInputGroup"
+                                    value="{{ $question->option_question_b }}"
+                                >
                             </div>
                             <div class="input-group mb-2">
                                 <div class="input-group-prepend">
                                     <div class="input-group-text border-dark">C</div>
                                 </div>
-                                <input name="option_question_c" type="text" class="form-control border-dark"
-                                       id="inlineFormInputGroup">
+                                <input
+                                    name="option_question_c"
+                                    type="text"
+                                    class="form-control border-dark"
+                                    id="inlineFormInputGroup"
+                                    value="{{ $question->option_question_c }}"
+                                >
                             </div>
                             <div class="input-group mb-2">
                                 <div class="input-group-prepend">
                                     <div class="input-group-text border-dark">D</div>
                                 </div>
-                                <input name="option_question_d" type="text" class="form-control border-dark"
-                                       id="inlineFormInputGroup">
+                                <input
+                                    name="option_question_d"
+                                    type="text"
+                                    class="form-control border-dark"
+                                    id="inlineFormInputGroup"
+                                    value="{{ $question->option_question_d }}"
+                                >
                             </div>
                             <div class="input-group mb-2">
                                 <div class="input-group-prepend">
                                     <div class="input-group-text border-dark">E</div>
                                 </div>
-                                <input name="option_question_e" type="text" class="form-control border-dark"
-                                       id="inlineFormInputGroup">
+                                <input
+                                    name="option_question_e"
+                                    type="text"
+                                    class="form-control border-dark"
+                                    id="inlineFormInputGroup"
+                                    value="{{ $question->option_question_e }}"
+                                >
                             </div>
 
                             <div class="">
                                 <label>Selecione a questão correta *</label>
                                 <div class="form-group">
                                     <select name="question_correct" class="custom-select border-dark" required>
-                                        <option value="A">A</option>
-                                        <option value="B">B</option>
-                                        <option value="C">C</option>
-                                        <option value="D">D</option>
-                                        <option value="E">E</option>
+                                        <option value="A" @if( $question->question_correct === 'A') selected @endif>A</option>
+                                        <option value="B" @if( $question->question_correct === 'B') selected @endif>B</option>
+                                        <option value="C" @if( $question->question_correct === 'C') selected @endif>C</option>
+                                        <option value="D" @if( $question->question_correct === 'D') selected @endif>D</option>
+                                        <option value="E" @if( $question->question_correct === 'E') selected @endif>E</option>
                                     </select>
                                 </div>
                             </div>
@@ -84,9 +115,9 @@
                             <label>Dificuldade *</label>
                             <div class="form-group">
                                 <select name="question_difficulty" class="custom-select border-dark" required>
-                                    <option value="EASY" selected>Fácil</option>
-                                    <option value="MEDIUM">Médio</option>
-                                    <option value="HARD">Difícil</option>
+                                    <option value="EASY"    @if( $question->question_difficulty === 'EASY') selected @endif>Fácil</option>
+                                    <option value="MEDIUM"  @if( $question->question_difficulty === 'MEDIUM') selected @endif>Médio</option>
+                                    <option value="HARD"    @if( $question->question_difficulty === 'HARD') selected @endif>Difícil</option>
                                 </select>
                             </div>
                         </div>
@@ -94,12 +125,12 @@
                             <label>Selecione a matéria dessa questão *</label>
                             <div class="form-group">
                                 <select name="question_subjects" class="custom-select border-dark" required>
-                                    <option value="POR">Português</option>
-                                    <option value="MAT">Matemática</option>
-                                    <option value="CIE">Ciências</option>
-                                    <option value="HIS">História</option>
-                                    <option value="GEO">Geográfia</option>
-                                    <option value="ING">Inglês</option>
+                                    <option value="POR" @if( $question->question_subjects === 'POR') selected @endif>Português</option>
+                                    <option value="MAT" @if( $question->question_subjects === 'MAT') selected @endif>Matemática</option>
+                                    <option value="CIE" @if( $question->question_subjects === 'CIE') selected @endif>Ciências</option>
+                                    <option value="HIS" @if( $question->question_subjects === 'HIS') selected @endif>História</option>
+                                    <option value="GEO" @if( $question->question_subjects === 'GEO') selected @endif>Geográfia</option>
+                                    <option value="ING" @if( $question->question_subjects === 'ING') selected @endif>Inglês</option>
                                 </select>
                             </div>
                         </div>
@@ -109,7 +140,13 @@
                         <div class="col-md-12 mb-3">
                             <label>Selecione o aquivo de imagem, caso queira</label>
                             <div class="custom-file">
-                                <input name="question_img" type="file" class="custom-file-input" id="customFile">
+                                <input
+                                    name="question_img"
+                                    type="file"
+                                    class="custom-file-input"
+                                    id="customFile"
+                                    value="{{ $question->question_img }}"
+                                >
                                 <label class="custom-file-label border-dark" for="customFile">Escolher a imagem</label>
                             </div>
                         </div>
@@ -139,3 +176,4 @@
         </div>
     </div>
 @endsection
+

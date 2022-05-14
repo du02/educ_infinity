@@ -42,6 +42,9 @@ Route::middleware(['auth', 'access.pages.admin'])->group(function(){
         Route::get('questions', 'Admin\\QuestionController@index')->name('admin.questions.index');
         Route::get('questions/create', 'Admin\\QuestionController@create')->name('admin.questions.create');
         Route::post('questions', 'Admin\\QuestionController@store')->name('admin.questions.store');
+        Route::get('questions/{id}/edit', 'Admin\\QuestionController@edit')->name('admin.questions.edit');
+        Route::post('questions/{id}', 'Admin\\QuestionController@update')->name('admin.questions.update');
+        Route::get('questions/{id}', 'Admin\\QuestionController@destroy')->name('admin.questions.destroy');
 
     });
 });
