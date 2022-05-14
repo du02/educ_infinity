@@ -18,7 +18,7 @@
                     <table class="table table-borderless table-hover ">
                         <thead class="">
                         <tr>
-                            <th scope="col" class="text-center">#</th>
+                            <th scope="col" class="text-center">Código</th>
                             <th scope="col">Disciplina</th>
                             <th scope="col">Questão</th>
                             <th scope="col">Data / Hora</th>
@@ -28,9 +28,9 @@
                         <tbody>
                             @foreach($questions as $question)
                                 <tr>
-                                    <th scope="row" class="text-center">{{ $loop->iteration }}</th>
+                                    <th scope="row" class="text-center">{{ $question->code_question }}</th>
                                     <td>{{ $question->question_subjects }}</td>
-                                    <td>{{ Str::limit($question->content_question, 70) }}</td>
+                                    <td>{{ Str::limit($question->content_question, 50) }}</td>
                                     <td>{{ $question->updated_at }}</td>
                                     <td class="text-right">
                                         <a class="btn my-btn-edit border border-dark mr-1" href=""><i class="fa-solid fa-pen-to-square mr-2"></i>Editar</a>

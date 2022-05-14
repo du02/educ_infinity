@@ -15,6 +15,11 @@
                         value="{{ $userID }}"
                         name="reference_id"
                     >
+                    <input
+                        type="hidden"
+                        value=""
+                        name="code_question"
+                    >
                     <div class="form-row">
                         <div class="col-md-6 mb-3">
                             <label for="validationCustom01">Digite o conteúdo da questão *</label>

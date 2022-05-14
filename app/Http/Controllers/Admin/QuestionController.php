@@ -14,7 +14,7 @@ class QuestionController extends Controller
     {
         $admin = Auth::id();
         $questions = Question::where('reference_id', $admin)
-                    ->orderBy('updated_at', 'desc')
+                    ->orderBy('id', 'desc')
                     ->paginate(5);
 
         return view('admin.questions.question_list', compact('questions'));
@@ -32,7 +32,7 @@ class QuestionController extends Controller
         try {
             $data = $request->all();
 
-            // validation
+            // validation image
             if($request->hasFile('question_img') && $request->file('question_img')->isValid())
             {
                 $dataImg = $request->file('question_img');
@@ -47,6 +47,13 @@ class QuestionController extends Controller
                 $data['question_img'] = '';
             }
 
+            // generating and adding question code
+            $id = Auth::id();
+            $role = Auth::user()->roles;
+
+            $data['code_question'] = $this->createCodeResort($role, $id);
+
+            // create question
             $question = new Question();
             $question->create($data);
 
@@ -79,5 +86,10 @@ class QuestionController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function createCodeResort($role, $id)
+    {
+        return strval(mt_rand() . $role . $id);
     }
 }

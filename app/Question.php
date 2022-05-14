@@ -8,6 +8,7 @@ class Question extends Model
 {
     protected $fillable = [
         'reference_id',
+        'code_question',
         'content_question',
         'option_question_a',
         'option_question_b',
