@@ -22,7 +22,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 </head>
-<body class="my-body-login">
+<body class="login-admin">
 <div id="app">
     <nav class="my-shadow navbar navbar-expand-md navbar-light bg-white border-bottom border-dark">
         <div class="container">
@@ -55,16 +55,19 @@
                     @elseif(auth()->user()->roles === 'TEACHER')
                         <ul class="navbar-nav mr-auto">
                             <li class="nav-item">
-                                <a class="nav-link" href="">Home</a>
+                                <a class="nav-link" href="{{ route('home') }}">Home</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="">Questões</a>
+                                <a class="nav-link" href="{{ route('teacher.questions.index') }}">Questões</a>
                             </li>
                         </ul>
                     @else
                         <ul class="navbar-nav mr-auto">
                             <li class="nav-item">
-                                <a class="nav-link" href="">Personagem</a>
+                                <a class="nav-link" href="{{ route('home') }}">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('home') }}">Personagem</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="">Questões</a>

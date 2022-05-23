@@ -21,7 +21,6 @@
 .logo {
     width: 55px;
 }
-
 /* BUTTONS */
 .my-btn-login-one {
     background-color: var(--my-blue);
@@ -54,13 +53,20 @@
 }
 
 /* END-BUTTONS */
-
 .my-shadow {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 /* LOGIN-PRINCIPAL */
-.my-body-login {
+.login-teacher {
+    background-color: var(--my-blue);
+}
+
+.login-studant {
+    background-color: var(--my-yellow);
+}
+
+.login-admin {
     background-color: var(--my-gray);
 }
 /* END-LOGIN-PRINCIPAL */

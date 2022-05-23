@@ -13,9 +13,7 @@ class QuestionController extends Controller
     public function index()
     {
         $admin = Auth::id();
-        $questions = Question::where('reference_id', $admin)
-                    ->orderBy('id', 'desc')
-                    ->paginate(5);
+        $questions = Question::orderBy('id', 'desc')->paginate(5);
 
         return view('admin.questions.question_list', compact('questions'));
     }
@@ -133,6 +131,7 @@ class QuestionController extends Controller
         }
     }
 
+    // Random code creation - criação de código aleatório
     public function createCodeResort($role, $id)
     {
         return strval(mt_rand() . $role . $id);

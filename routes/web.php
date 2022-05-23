@@ -49,5 +49,18 @@ Route::middleware(['auth', 'access.pages.admin'])->group(function(){
     });
 });
 
+Route::middleware(['auth'])->group(function(){
+    Route::prefix('teacher')->group(function(){
+
+        // teacher/questions
+        Route::get('questions', 'Teacher\\QuestionController@index')->name('teacher.questions.index');
+        Route::get('questions/create', 'Teacher\\QuestionController@create')->name('teacher.questions.create');
+        Route::post('questions', 'Teacher\\QuestionController@store')->name('teacher.questions.store');
+        Route::get('questions/{id}/edit', 'Teacher\\QuestionController@edit')->name('teacher.questions.edit');
+        Route::post('questions/{id}', 'Teacher\\QuestionController@update')->name('teacher.questions.update');
+        Route::get('questions/{id}', 'Teacher\\QuestionController@destroy')->name('teacher.questions.destroy');
+    });
+});
+
 
 
