@@ -36,7 +36,8 @@ class HomeController extends Controller
         }
         else
         {
-            return view('studant.home');
+            //return view('studant.home');
+            return view('studant.character');
         }
 
     }
