@@ -26,6 +26,7 @@ class CreateUsersTable extends Migration
             $table->string('class')->default('');
             $table->enum('roles', ['ADMIN', 'TEACHER', 'STUDANT']);
             $table->integer('reference_id_admin')->default(0);
+            $table->integer('access')->default(0);
             $table->rememberToken();
             $table->timestamps();
         });

@@ -20,7 +20,8 @@ class User extends Authenticatable
         'father',
         'class',
         'roles',
-        'reference_id_admin'
+        'reference_id_admin',
+        'access'
     ];
 
     protected $hidden = [
@@ -35,4 +36,9 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function character()
+    {
+        return $this->hasOne(Character::class);
+    }
 }

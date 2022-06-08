@@ -32,9 +32,43 @@
             <img src="{{ asset('assets/img/cards/characters/character-1.png') }}" alt="">
         </div>
         <div class="form-character">
-            <form action="" method="">
-                <div>
-                    <select class="my-character-selected" id="id-character" name="id_character">
+            <form action="{{ route('studant.character.selected') }}" method="post">
+                @csrf
+                    <input
+                        type="hidden"
+                        value="1"
+                        name="access">
+                    <input
+                        type="hidden"
+                        value="{{ $user }}"
+                        name="studant_id">
+                    <div>
+                    <input
+                        type="hidden"
+                        value="230"
+                        name="power">
+                    <input
+                        type="hidden"
+                        value="10"
+                        name="attack">
+                    <input
+                        type="hidden"
+                        value="100"
+                        name="vitality">
+                    <input
+                        type="hidden"
+                        value="10"
+                        name="critical">
+                    <input
+                        type="hidden"
+                        value="10"
+                        name="luck">
+                     <input
+                         type="hidden"
+                         value="100"
+                         name="armor">
+
+                    <select class="my-character-selected" id="id-character" name="character_id">
                         <option value="1">Guerreiro</option>
                         <option value="2">Doutor</option>
                         <option value="3">Elfa</option>

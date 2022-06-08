@@ -62,5 +62,10 @@ Route::middleware(['auth'])->group(function(){
     });
 });
 
+Route::middleware(['auth'])->group(function(){
+    Route::prefix('studant')->group(function(){
 
-
+        Route::get('home', 'Studant\\CharacterController@index')->name('studant.home');
+        Route::post('studant/character/selected', 'Studant\\CharacterController@characterSelected')->name('studant.character.selected');
+    });
+});
