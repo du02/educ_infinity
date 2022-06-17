@@ -15,6 +15,14 @@ class CharacterController extends Controller
         return view('studant.home');
     }
 
+    public function character()
+    {
+        $studant = Auth::id();
+        $myCharacter = Character::where('studant_id', $studant)->get();
+
+        return view('studant.my_character', compact('myCharacter'));
+    }
+
     public function characterSelected(Request $request)
     {
         $studant = Auth::id();

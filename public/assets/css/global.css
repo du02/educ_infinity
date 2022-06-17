@@ -105,4 +105,17 @@
 }
 /* SREEM-CHARACTER-END */
 
+/* DIALOG OLD LADY */
+.old-lady-dialog {
+    margin-left: -1rem;
+    margin-top: -2.5rem;
+}
+.avatar-mission {
+    width: 4.5rem;
+    left: 4rem;
+
+    margin-right: -1rem;
+}
+/* END DIALOG */
+
 

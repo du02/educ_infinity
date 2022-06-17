@@ -67,10 +67,13 @@
                                 <a class="nav-link" href="{{ route('home') }}">Home</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('home') }}">Personagem</a>
+                                <a class="nav-link" href="{{ route('studant.character') }}">Personagem</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="">Questões</a>
+                                <a class="nav-link" href="{{ route('studant.questions') }}">Questões</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="">Batalhas</a>
                             </li>
                         </ul>
                 @endif

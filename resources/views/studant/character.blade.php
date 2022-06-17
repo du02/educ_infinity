@@ -31,7 +31,7 @@
         <div id="img-character" class="mt-3">
             <img src="{{ asset('assets/img/cards/characters/character-1.png') }}" alt="">
         </div>
-        <div class="form-character">
+        <div class="form-character mb-4">
             <form action="{{ route('studant.character.selected') }}" method="post">
                 @csrf
                     <input
