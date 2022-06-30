@@ -18,6 +18,11 @@
     font-family: 'Open Sans', sans-serif;
 }
 
+hr {
+    background-color: var(--my-dark) ;
+    border: 0.05rem solid var(--my-dark);
+}
+
 .logo {
     width: 55px;
 }

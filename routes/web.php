@@ -67,9 +67,17 @@ Route::middleware(['auth'])->group(function(){
 
         Route::get('home', 'Studant\\CharacterController@index')->name('studant.home');
         Route::get('character', 'Studant\\CharacterController@character')->name('studant.character');
-        Route::post('studant/character/selected', 'Studant\\CharacterController@characterSelected')->name('studant.character.selected');
-        Route::get('questions', 'Studant\\ResolveQuestionsController@index')->name('studant.questions');
-        Route::get('questions/resolve', 'Studant\\ResolveQuestionsController@resolveQuestions')->name('studant.questionsResolve');
+        Route::post('character/selected', 'Studant\\CharacterController@characterSelected')->name('studant.character.selected');
+        Route::get('questions/resorting', 'Studant\\ResolveQuestionsController@resortingQuestions')->name('studant.questionsResorting');
+        Route::post('questions/resolve', 'Studant\\ResolveQuestionsController@compareQuestions')->name('studant.questionsResolve');
+    });
+});
 
+Route::middleware(['auth', 'access.pages.question'])->group(function(){
+    Route::prefix('studant')->group(function(){
+
+        Route::get('questions', 'Studant\\ResolveQuestionsController@index')->name('studant.questions');
+
+        Route::get('questions/date', 'Studant\\ResolveQuestionsController@acessQuestionDaily')->name('studant.date');
     });
 });

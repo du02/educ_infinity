@@ -15,10 +15,197 @@ class ResolveQuestionsController extends Controller
         $studant = Auth::id();
         $myAvatar = Character::where('studant_id', $studant)->get();
 
-        return view('studant/resolve_questions', compact('myAvatar'));
+        $questions = $this->resortingQuestions();
+
+        return view('studant/resolve_questions', compact('myAvatar', 'questions'));
+    }
+    public function compareQuestions(Request $request)
+    {
+        // 4 (1), 7 (2), 10 (3), 13 (4), 16 (5)
+        $arr_amount = count($request->all());
+        $point = 0;
+
+        // Counting power points - Contabilizando pontos de poder
+        switch ($arr_amount)
+        {
+            case 4:
+
+                if($request->question_response_1 === $request->resolve_1)
+                {
+                    $point += 1;
+                }
+                else
+                {
+                    echo 'Errou!';
+                }
+
+                $mult_point = $point * 5;
+                $this->addingPowerCharacter($mult_point);
+
+                break;
+
+            case 7:
+
+                if($request->question_response_1 === $request->resolve_1)
+                {
+                    $point += 1;
+                }
+                else
+                {
+                    echo 'Errou!';
+                }
+
+                if($request->question_response_2 === $request->resolve_2)
+                {
+                    $point += 1;
+                }
+                else
+                {
+                    echo 'Errou!';
+                }
+
+                $mult_point = $point * 5;
+                $this->addingPowerCharacter($mult_point);
+
+                break;
+
+            case 10:
+
+                if($request->question_response_1 === $request->resolve_1)
+                {
+                    $point += 1;
+                }
+                else
+                {
+                    echo 'Errou!';
+                }
+
+                if($request->question_response_2 === $request->resolve_2)
+                {
+                    $point += 1;
+                }
+                else
+                {
+                    echo 'Errou!';
+                }
+
+                if($request->question_response_3 === $request->resolve_3)
+                {
+                    $point += 1;
+                }
+                else
+                {
+                    echo 'Errou!';
+                }
+
+
+                $mult_point = $point * 5;
+                $this->addingPowerCharacter($mult_point);
+
+                break;
+
+            case 13:
+
+                if($request->question_response_1 === $request->resolve_1)
+                {
+                    $point += 1;
+                }
+                else
+                {
+                    echo 'Errou!';
+                }
+
+                if($request->question_response_2 === $request->resolve_2)
+                {
+                    $point += 1;
+                }
+                else
+                {
+                    echo 'Errou!';
+                }
+
+                if($request->question_response_3 === $request->resolve_3)
+                {
+                    $point += 1;
+                }
+                else
+                {
+                    echo 'Errou!';
+                }
+
+                if($request->question_response_4 === $request->resolve_4)
+                {
+                    $point += 1;
+                }
+                else
+                {
+                    echo 'Errou!';
+                }
+
+                $mult_point = $point * 5;
+                $this->addingPowerCharacter($mult_point);
+
+                break;
+
+            case 16:
+
+                if($request->question_response_1 === $request->resolve_1)
+                {
+                    $point += 1;
+                }
+                else
+                {
+                    echo 'Errou!';
+                }
+
+                if($request->question_response_2 === $request->resolve_2)
+                {
+                    $point += 1;
+                }
+                else
+                {
+                    echo 'Errou!';
+                }
+
+                if($request->question_response_3 === $request->resolve_3)
+                {
+                    $point += 1;
+                }
+                else
+                {
+                    echo 'Errou!';
+                }
+
+                if($request->question_response_4 === $request->resolve_4)
+                {
+                    $point += 1;
+                }
+                else
+                {
+                    echo 'Errou!';
+                }
+
+                if($request->question_response_5 === $request->resolve_5)
+                {
+                    $point += 1;
+                }
+                else
+                {
+                    echo 'Errou!';
+                }
+
+                $mult_point = $point * 5;
+                $this->addingPowerCharacter($mult_point);
+
+                break;
+        }
+
+        // Redirection after assigning new power points - Redirecionamento depois que atribuir novos pontos de poder
+        return redirect()->route('studant.character');
+
     }
 
-    public function resolveQuestions()
+    public function resortingQuestions()
     {
         // Totaling questions - Totalizando questões
         $questions_all = Question::all();
@@ -36,7 +223,38 @@ class ResolveQuestionsController extends Controller
         $questions = Question::whereIn('id', $arr_number)->get();
 
         //dd($questions, $arr_number);
+        //return response()->json($questions);
 
-        return response()->json($questions);
+        return $questions;
     }
+
+    public function getCharacterPower()
+    {
+        // Get value Power Character - Pegando valor do poder do personagem
+        $id_user = Auth::id();
+        $character = Character::where('studant_id', $id_user)->first();
+
+        return $character->power;
+    }
+
+    public function addingPowerCharacter($val)
+    {
+        $power = $this->getCharacterPower();
+        $new_power = $power + $val;
+
+        $this->setCharacterNewPower($new_power, $val);
+    }
+
+    public function setCharacterNewPower($new_val, $old_val)
+    {
+        $id_user = Auth::id();
+
+        // Editing new character power - Editando novo poder do personagem
+        $character = Character::where('studant_id', $id_user)->first();
+        $character->power = $new_val;
+        $character->save();
+
+        toastr()->info('Seu Poder aumentou em: ' . $old_val);
+    }
+
 }
