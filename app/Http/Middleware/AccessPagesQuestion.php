@@ -21,17 +21,25 @@ class AccessPagesQuestion
         $character = Character::where('studant_id', $id_user)->first();
 
         // DB date and time - Data e hora do BD
-        $old_data = $character->updated_at->format('j-m-y');
-        $old_data_time = $character->updated_at->format('H:i:s');
+        $old_day = intval($character->updated_at->format('j'));
+        $old_month = intval($character->updated_at->format('m'));
+        $old_year= intval($character->updated_at->format('y'));
 
         // Location date and time - Data e hora do local
-        $now_date = date('j-m-y');
-        $now_date_time = date('H:i:s');
+        $now_day = intval(date('j'));
+        $now_month = intval(date('m'));
+        $now_year = intval(date('y'));
 
-        if($old_data >= $now_date)
+        if ($old_year >= $now_year)
         {
-            toastr()->success('Missões complidas por hoje!');
-            return redirect()->route('studant.character');
+            if ($old_month >= $now_month)
+            {
+                if ($old_day >= $now_day)
+                {
+                    toastr()->success('Missões complidas por hoje!');
+                    return redirect()->route('studant.character');
+                }
+            }
         }
 
         return $next($request);
