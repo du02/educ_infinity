@@ -40,7 +40,7 @@ class ResolveQuestionsController extends Controller
                 }
 
                 $mult_point = $point * 5;
-                $this->addingPowerCharacter($mult_point);
+                $this->addingPowerCharacter($mult_point, $point);
 
                 break;
 
@@ -65,7 +65,7 @@ class ResolveQuestionsController extends Controller
                 }
 
                 $mult_point = $point * 5;
-                $this->addingPowerCharacter($mult_point);
+                $this->addingPowerCharacter($mult_point, $point);
 
                 break;
 
@@ -100,7 +100,7 @@ class ResolveQuestionsController extends Controller
 
 
                 $mult_point = $point * 5;
-                $this->addingPowerCharacter($mult_point);
+                $this->addingPowerCharacter($mult_point, $point);
 
                 break;
 
@@ -143,7 +143,7 @@ class ResolveQuestionsController extends Controller
                 }
 
                 $mult_point = $point * 5;
-                $this->addingPowerCharacter($mult_point);
+                $this->addingPowerCharacter($mult_point, $point);
 
                 break;
 
@@ -195,7 +195,7 @@ class ResolveQuestionsController extends Controller
                 }
 
                 $mult_point = $point * 5;
-                $this->addingPowerCharacter($mult_point);
+                $this->addingPowerCharacter($mult_point, $point);
 
                 break;
         }
@@ -237,21 +237,34 @@ class ResolveQuestionsController extends Controller
         return $character->power;
     }
 
-    public function addingPowerCharacter($val)
+    public function getCharacterPoints()
+    {
+        // Get value Points Character - Pegando valor do pontos do personagem
+        $id_user = Auth::id();
+        $character = Character::where('studant_id', $id_user)->first();
+
+        return $character->points;
+    }
+
+    public function addingPowerCharacter($val, $correct_questions_amount)
     {
         $power = $this->getCharacterPower();
         $new_power = $power + $val;
 
-        $this->setCharacterNewPower($new_power, $val);
+        $points = $this->getCharacterPoints();
+        $new_points = $points + $correct_questions_amount;
+
+        $this->setCharacterNewPowerAndPoints($new_power, $val, $new_points);
     }
 
-    public function setCharacterNewPower($new_val, $old_val)
+    public function setCharacterNewPowerAndPoints($new_val, $old_val, $new_points)
     {
         $id_user = Auth::id();
 
         // Editing new character power - Editando novo poder do personagem
         $character = Character::where('studant_id', $id_user)->first();
         $character->power = $new_val;
+        $character->points = $new_points;
         $character->save();
 
         toastr()->info('Seu Poder aumentou em: ' . $old_val);
