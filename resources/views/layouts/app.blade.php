@@ -73,7 +73,7 @@
                                 <a class="nav-link" href="{{ route('studant.questions') }}">Questões</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="">Batalhas</a>
+                                <a class="nav-link" href="{{ route('studant.battles') }}">Duelos</a>
                             </li>
                         </ul>
                 @endif

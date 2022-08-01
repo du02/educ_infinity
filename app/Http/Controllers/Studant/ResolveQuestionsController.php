@@ -19,6 +19,7 @@ class ResolveQuestionsController extends Controller
 
         return view('studant/resolve_questions', compact('myAvatar', 'questions'));
     }
+
     public function compareQuestions(Request $request)
     {
         // 4 (1), 7 (2), 10 (3), 13 (4), 16 (5)
@@ -205,7 +206,7 @@ class ResolveQuestionsController extends Controller
 
     }
 
-    public function resortingQuestions()
+    protected function resortingQuestions()
     {
         // Totaling questions - Totalizando questões
         $questions_all = Question::all();
@@ -228,7 +229,7 @@ class ResolveQuestionsController extends Controller
         return $questions;
     }
 
-    public function getCharacterPower()
+    protected function getCharacterPower()
     {
         // Get value Power Character - Pegando valor do poder do personagem
         $id_user = Auth::id();
@@ -237,7 +238,7 @@ class ResolveQuestionsController extends Controller
         return $character->power;
     }
 
-    public function getCharacterPoints()
+    protected function getCharacterPoints()
     {
         // Get value Points Character - Pegando valor do pontos do personagem
         $id_user = Auth::id();
@@ -246,7 +247,7 @@ class ResolveQuestionsController extends Controller
         return $character->points;
     }
 
-    public function addingPowerCharacter($val, $correct_questions_amount)
+    protected function addingPowerCharacter($val, $correct_questions_amount)
     {
         $power = $this->getCharacterPower();
         $new_power = $power + $val;
@@ -257,7 +258,7 @@ class ResolveQuestionsController extends Controller
         $this->setCharacterNewPowerAndPoints($new_power, $val, $new_points);
     }
 
-    public function setCharacterNewPowerAndPoints($new_val, $old_val, $new_points)
+    protected function setCharacterNewPowerAndPoints($new_val, $old_val, $new_points)
     {
         $id_user = Auth::id();
 

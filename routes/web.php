@@ -71,6 +71,7 @@ Route::middleware(['auth'])->group(function(){
         Route::get('questions/resorting', 'Studant\\ResolveQuestionsController@resortingQuestions')->name('studant.questionsResorting');
         Route::post('questions/resolve', 'Studant\\ResolveQuestionsController@compareQuestions')->name('studant.questionsResolve');
 
+        Route::get('duels', 'Studant\\BattlesController@index')->name('studant.battles');
     });
 });
 
