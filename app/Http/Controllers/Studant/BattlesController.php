@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Studant;
 
 use App\Character;
 use App\Http\Controllers\Controller;
+use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -30,35 +31,41 @@ class BattlesController extends Controller
         $data = $this->resortOpponent($my_character_îd, $rand);
 
         return view('studant/duels', compact('data'));
-        //return response()->json($data);
+        return response()->json($data);
 
     }
 
     protected function resortOpponent($id_user, $id_rand)
     {
-        if($id_user !== $id_rand)
-        {
-            $challenged = Character::where('studant_id',  $id_user)->get(); // DesafiaDO (EU)
-            $opponent = Character::where('studant_id', $id_rand)->get(); // DesafiANTE (OPONENTE)
+        try {
 
-            return [
-                'challenged' => $challenged,
-                'opponent' => $opponent
-            ];
-        } else {
-            // amount opponents - quantidade de oponentes
-            $amount_opponents = Character::all()->count();
+            if($id_user !== $id_rand && !empty($id_user) && !empty($id_rand))
+            {
+                $challenged = Character::where('studant_id',  $id_user)->get(); // DesafiaDO (EU)
+                $opponent = Character::where('studant_id', $id_rand)->get(); // DesafiANTE (OPONENTE)
+                $name_opponent = User::where('id', $opponent[0]->studant_id)->get('name');
 
-            // rand_amount - randomizar quantidade
-            $rand = mt_rand(2, $amount_opponents);
+                return [
+                    'challenged' => $challenged,
+                    'opponent' => $opponent,
+                    'name_opponent' => $name_opponent
+                ];
 
-            $challenged = Character::where('studant_id',  $id_user)->get(); // DesafiaDO (EU)
-            $opponent = Character::where('studant_id', $rand)->get(); // DesafiANTE (OPONENTE)
+            } else {
 
-            return [
-                'challenged' => $challenged,
-                'opponent' => $opponent
-            ];
+                $challenged = Character::where('studant_id',  $id_user)->get(); // DesafiaDO (EU)
+                $opponent = Character::where('studant_id', ($id_rand - 1))->get(); // DesafiANTE (OPONENTE)
+                $name_opponent = User::where('id', $opponent[0]->studant_id)->get('name');
+
+                return [
+                    'challenged' => $challenged,
+                    'opponent' => $opponent,
+                    'name_opponent' => $name_opponent
+                ];
+            }
+
+        } catch (Exception $e) {
+            header("Refresh: 0");
         }
     }
 }

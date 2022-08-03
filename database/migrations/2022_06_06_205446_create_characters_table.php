@@ -24,6 +24,8 @@ class CreateCharactersTable extends Migration
             $table->integer('luck')->default(10);
             $table->integer('armor')->default(100);
             $table->integer('points')->default(0);
+            $table->integer('energy')->default(0);
+            $table->integer('fight')->default(0);
             $table->timestamps();
 
             $table->foreign('studant_id')->references('id')->on('users');

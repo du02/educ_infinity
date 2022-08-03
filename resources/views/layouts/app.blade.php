@@ -134,6 +134,6 @@
     @toastr_render
 
     <!-- My-Scripts -->
-
+    <script src="{{ asset('js/duels_logic.js') }}"></script>
 </body>
 </html>
