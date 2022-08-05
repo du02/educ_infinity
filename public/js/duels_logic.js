@@ -1,4 +1,11 @@
 const buttonDuel = document.querySelector('#button-duel');
+const buttonReloadDuel = document.querySelector('#button-reload-duel');
+
+const divProgressBarChal = document.querySelector('#progress-bar-challenged');
+const divProgressBarPop = document.querySelector('#progress-bar-opponent');
+const divDefeatChal = document.querySelector('#challenged');
+const divDefeatOpp = document.querySelector('#opponent');
+const textResult = document.querySelector('#text-result');
 
 // data-challenged
 let challengedId = document.querySelector('#challenged-studant-id').value;
@@ -45,10 +52,109 @@ let dataOpponent = {
 buttonDuel.addEventListener('click', (e) => {
     e.preventDefault();
 
-    init(dataChallenged, dataOpponent);
+    init();
 });
 
-const init = (challengend, opponent) => {
-    console.log(challengend, opponent);
+const init = () => {
+
+    // buttons config
+    buttonInvisible();
+    // animate progress
+    progressBar();
+    // button reload
+    setTimeout(addButtonReload, 10500);
+    // result duel
+    setTimeout(startDuel, 10600);
 }
+
+const startDuel = () => {
+    let value = battle(dataChallenged, dataOpponent);
+
+    if (value === 1){
+        console.log('Você venceu!')
+        addTextResult('Parabéns! você venceu.');
+        divDefeatDuel(divDefeatOpp);
+    } else {
+        console.log('Seu oponente venceu!')
+        addTextResult('Derrota! seu oponente venceu.');
+        divDefeatDuel(divDefeatChal);
+    }
+
+    modalResult();
+}
+
+const battle = (challenged, opponent) => {
+
+    let damageChallenged = damage(challenged, opponent.vitality);
+    let damageOpponent = damage(opponent, challenged.vitality);
+
+    let result = (damageChallenged.length > damageOpponent.length) ? 1 : 0;
+    return result;
+}
+
+// Logic damage
+const damage = (data, hp) => {
+    let round = 1;
+    let listDamage = [];
+
+    do {
+
+        let damageHit = getRandomDamage(0, data.attack);
+        let nowVitality = hp -= damageHit;
+
+        listDamage.push(damageHit);
+
+        if (nowVitality <= 0)
+        {
+            break;
+        }
+
+    } while (round < 20);
+
+    return listDamage;
+}
+
+// Random max. Damage
+const getRandomDamage = (min, max) => {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return (Math.floor(Math.random() * (max - min)) + min);
+}
+
+// static
+const divDefeatDuel = (div) => {
+    div.classList.add('defeat');
+}
+
+const buttonInvisible = () => {
+    buttonDuel.classList.add('invisible');
+}
+
+const addButtonReload = () => {
+    buttonReloadDuel.classList.remove('invisible')
+    buttonReloadDuel.addEventListener('click', (e) => {
+        e.preventDefault();
+
+        window.location.reload();
+    });
+}
+
+// progress bar
+const progressBar = () => {
+    divProgressBarChal.classList.add('progress-bar-animate-one-normal');
+    divProgressBarPop.classList.add('progress-bar-animate-one-reverse');
+}
+
+const addTextResult = (winner) => {
+    textResult.innerHTML = winner;
+}
+
+// modal
+const modalResult = () => {
+    $('#resultDuelModal').modal({
+       show: true
+    });
+}
+
+
 

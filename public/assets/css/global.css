@@ -137,4 +137,97 @@ hr {
     font-size: 13px;
 }
 
+/* IMG FILTER */
+.defeat {
+    filter: grayscale(100%) opacity(60%);
+}
+
+/* IMG MODAL */
+.img-modal {
+    height: 150px;
+    width: 150px;
+}
+
+/* PROGRESS BAR */
+.progress-bar-oppo {
+    width: 100%;
+}
+
+.progress-bar-chal {
+    width: 100%;
+}
+
+.progress-bar-animate-one-normal {
+    width: 100%;
+    animation-name: progress-bar-normal-1;
+    animation-duration: 9s;
+    animation-fill-mode: forwards;
+    animation-timing-function: step-end;
+    animation-delay: 1s;
+}
+
+.progress-bar-animate-one-reverse {
+    width: 100%;
+    animation-name: progress-bar-reverse-1;
+    animation-duration: 9s;
+    animation-fill-mode: forwards;
+    animation-timing-function: step-end;
+    animation-delay: 1s;
+    animation-direction: revert;
+}
+
+@keyframes progress-bar-normal-1 {
+    100% {
+        width: 1%;
+    }
+    87% {
+        width: 18%;
+    }
+    60% {
+        width: 32%;
+    }
+    55% {
+        width: 54%;
+    }
+    40% {
+        width: 68%;
+    }
+    25% {
+        width: 75%;
+    }
+    10% {
+        width: 82%;
+    }
+    0% {
+        width: 100%;
+    }
+}
+
+@keyframes progress-bar-reverse-1 {
+    100% {
+        width: 1%;
+    }
+    87% {
+        width: 9%;
+    }
+    70% {
+        width: 14%;
+    }
+    55% {
+        width: 30%;
+    }
+    38% {
+        width: 51%;
+    }
+    25% {
+        width: 76%;
+    }
+    10% {
+        width: 92%;
+    }
+    0% {
+        width: 100%;
+    }
+}
+
 

@@ -46,8 +46,15 @@
                                            <input type="hidden" id="challenged-points" value="{{ $data['challenged'][0]->points }}">
                                        </div>
 
-                                       <div class="progress">
-                                           <div class="progress-bar bg-danger" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                                       <div class="progress border border-danger">
+                                           <div
+                                               id="progress-bar-challenged"
+                                               class="progress-bar bg-danger progress-bar-chal"
+                                               role="progressbar"
+                                               aria-valuenow="{{ $data['challenged'][0]->vitality }}"
+                                               aria-valuemin="0"
+                                               aria-valuemax="{{ $data['challenged'][0]->vitality }}">
+                                           </div>
                                        </div>
                                    </div>
                                    <div class="ml-2" id="opponent">
@@ -73,8 +80,15 @@
                                            <input type="hidden" id="opponent-points" value="{{ $data['opponent'][0]->points }}">
                                        </div>
 
-                                       <div class="progress">
-                                           <div class="progress-bar bg-danger" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                                       <div class="progress border border-danger">
+                                           <div
+                                               id="progress-bar-opponent"
+                                               class="progress-bar bg-danger progress-bar-oppo"
+                                               role="progressbar"
+                                               aria-valuenow="{{ $data['opponent'][0]->vitality }}"
+                                               aria-valuemin="0"
+                                               aria-valuemax="{{ $data['opponent'][0]->vitality }}">
+                                           </div>
                                        </div>
                                    </div>
                                </div>
@@ -86,7 +100,14 @@
                                     >
                                         DUELAR!
                                     </button>
-                                </div>
+
+                                    <button
+                                        class="invisible btn my-btn-login-one border border-dark mr-1 font-weight-bold btn-lg btn-block"
+                                        name="button-reload"
+                                        id="button-reload-duel"
+                                    >
+                                        DUELAR NOVAMENTE
+                                    </button>
                             </form>
 
                         </div>
@@ -100,6 +121,26 @@
                         </div>
                         -->
                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="resultDuelModal" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="d-flex justify-content-center ">
+                        <img src="{{ '../assets/img/icon/games/attack.png' }}" alt="" class="img-modal">
+                    </div>
+
+                    <h2 id="text-result" class="text-center mb-5"></h2>
                 </div>
             </div>
         </div>
