@@ -22,6 +22,9 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::middleware(['auth', 'access.pages.admin'])->group(function(){
     Route::prefix('admin')->group(function(){
 
+        // admin/reset/energy
+        Route::get('reset/energy', 'Admin\\ResertEnergyDuelController@resetEnergy')->name('reset.energy');
+
         // admin/teachers
         Route::get('teachers', 'Admin\\TeacherController@index')->name('admin.teachers.index');
         Route::get('teachers/create', 'Admin\\TeacherController@create')->name('admin.teachers.create');
@@ -71,7 +74,7 @@ Route::middleware(['auth'])->group(function(){
         Route::get('questions/resorting', 'Studant\\ResolveQuestionsController@resortingQuestions')->name('studant.questionsResorting');
         Route::post('questions/resolve', 'Studant\\ResolveQuestionsController@compareQuestions')->name('studant.questionsResolve');
 
-        Route::get('duels', 'Studant\\BattlesController@index')->name('studant.battles');
+
     });
 });
 
@@ -79,6 +82,14 @@ Route::middleware(['auth', 'access.pages.question'])->group(function(){
     Route::prefix('studant')->group(function(){
 
         Route::get('questions', 'Studant\\ResolveQuestionsController@index')->name('studant.questions');
+
+    });
+});
+
+Route::middleware(['auth', 'access.pages.duel'])->group(function(){
+    Route::prefix('studant')->group(function(){
+
+        Route::get('duels', 'Studant\\BattlesController@index')->name('studant.battles');
 
     });
 });

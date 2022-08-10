@@ -9,7 +9,12 @@
 
                     <div class="card-body">
 
-admin
+                        <div class="reset-energy">
+                            <p>Clique em "Restaurar" para recuperar toda a energia dos alunos.</p>
+                            <a href="{{ route('reset.energy') }}"
+                                class="btn my-btn-add border border-dark ml-1 font-weight-bold"
+                                    id="">Restaurar</a>
+                        </div>
                     </div>
                 </div>
             </div>

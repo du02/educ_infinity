@@ -21,6 +21,7 @@
                     <div class="card-body">
                         <div>
                             <form>
+                                @csrf
                                <div class="row justify-content-around">
 
                                    <div id="challenged">

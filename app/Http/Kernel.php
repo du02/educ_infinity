@@ -2,6 +2,7 @@
 
 namespace App\Http;
 
+use App\Http\Middleware\AccessPagesDuel;
 use Illuminate\Foundation\Http\Kernel as HttpKernel;
 
 class Kernel extends HttpKernel
@@ -63,6 +64,7 @@ class Kernel extends HttpKernel
         'verified' => \Illuminate\Auth\Middleware\EnsureEmailIsVerified::class,
         'access.pages.admin' => \App\Http\Middleware\AccessPagesAdmin::class,
         'access.pages.question' => \App\Http\Middleware\AccessPagesQuestion::class,
+        'access.pages.duel' => \App\Http\Middleware\AccessPagesDuel::class
     ];
 
     /**
