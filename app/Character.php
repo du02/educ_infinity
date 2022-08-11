@@ -14,6 +14,9 @@ class Character extends Model
         'vitality',
         'critical',
         'luck',
+        'energy',
+        'points',
+        'fight',
         'armor'
     ];
 

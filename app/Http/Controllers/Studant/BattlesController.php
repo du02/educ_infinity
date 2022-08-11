@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 class BattlesController extends Controller
 {
@@ -67,5 +68,27 @@ class BattlesController extends Controller
         } catch (Exception $e) {
             header("Refresh: 0");
         }
+    }
+
+    protected function removeEnery()
+    {
+        $remove = 1;
+
+        $studant = Auth::id();
+        $energy = Character::where('studant_id', $studant)->get('energy');
+
+        if ($energy[0]->energy !== 0)
+        {
+            DB::table('characters')
+                ->where('studant_id', $studant)
+                ->update(['energy' => ($energy[0]->energy - $remove)]);
+
+            toastr()->warning('-1 ponto de energia');
+        }
+    }
+
+    protected function pointsFight()
+    {
+        
     }
 }

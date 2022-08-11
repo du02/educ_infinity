@@ -21,8 +21,8 @@
                     <div class="card-body">
                         <div>
                             <form>
-                                @csrf
-                               <div class="row justify-content-around">
+                                <input type="hidden" name="_token" id="token" value="{{ csrf_token() }}" />
+                                <div class="row justify-content-around">
 
                                    <div id="challenged">
                                        <h3 class="text-center font-weight-bold">{{ Auth::user()->name }}</h3>

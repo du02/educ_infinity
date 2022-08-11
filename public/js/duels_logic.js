@@ -49,6 +49,9 @@ let dataOpponent = {
     'points': opponentPoints
 };
 
+let url = 'http://127.0.0.1:8000/studant/remove-energy';
+let token = document.querySelector('#token').value;
+
 buttonDuel.addEventListener('click', (e) => {
     e.preventDefault();
 
@@ -57,6 +60,8 @@ buttonDuel.addEventListener('click', (e) => {
 
 const init = () => {
 
+    // remove energy
+    removeEnergy(url, token);
     // buttons config
     buttonInvisible();
     // animate progress
@@ -65,17 +70,18 @@ const init = () => {
     setTimeout(addButtonReload, 10500);
     // result duel
     setTimeout(startDuel, 10600);
+
 }
 
 const startDuel = () => {
     let value = battle(dataChallenged, dataOpponent);
 
     if (value === 1){
-        console.log('Você venceu!')
+        //console.log('Você venceu!')
         addTextResult('Parabéns! você venceu.');
         divDefeatDuel(divDefeatOpp);
     } else {
-        console.log('Seu oponente venceu!')
+        //console.log('Seu oponente venceu!')
         addTextResult('Derrota! seu oponente venceu.');
         divDefeatDuel(divDefeatChal);
     }
@@ -156,5 +162,22 @@ const modalResult = () => {
     });
 }
 
-// inserts
+// remove energy
+const removeEnergy = (url, token) => {
+    $.ajaxSetup({
+        headers: {
+            'X-CSRF-TOKEN': token,
+        }
+    });
+
+    $(document).ready(function () {
+
+           $.ajax({
+               url: url,
+               type: 'get',
+               dataType: 'json'
+           });
+    });
+}
+
 

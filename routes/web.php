@@ -90,6 +90,7 @@ Route::middleware(['auth', 'access.pages.duel'])->group(function(){
     Route::prefix('studant')->group(function(){
 
         Route::get('duels', 'Studant\\BattlesController@index')->name('studant.battles');
+        Route::get('remove-energy', 'Studant\\BattlesController@removeEnery')->name('studant.energy');
 
     });
 });
