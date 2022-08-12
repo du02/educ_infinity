@@ -87,8 +87,15 @@ class BattlesController extends Controller
         }
     }
 
-    protected function pointsFight()
+    protected function pointsFight(Request $request)
     {
-        
+        $points_fight = 10;
+        $id_request = $request->all();
+
+        DB::table('characters')
+            ->where('studant_id', $id_request['id'])
+            ->update(['fight' => $points_fight]);
+
+        return response()->json($id_request['id']);
     }
 }

@@ -49,7 +49,8 @@ let dataOpponent = {
     'points': opponentPoints
 };
 
-let url = 'http://127.0.0.1:8000/studant/remove-energy';
+let urlRemove = 'http://127.0.0.1:8000/studant/remove-energy';
+let urlAdding = 'http://127.0.0.1:8000/studant/adding-points-fight';
 let token = document.querySelector('#token').value;
 
 buttonDuel.addEventListener('click', (e) => {
@@ -61,7 +62,7 @@ buttonDuel.addEventListener('click', (e) => {
 const init = () => {
 
     // remove energy
-    removeEnergy(url, token);
+    removeEnergy(urlRemove, token);
     // buttons config
     buttonInvisible();
     // animate progress
@@ -77,11 +78,11 @@ const startDuel = () => {
     let value = battle(dataChallenged, dataOpponent);
 
     if (value === 1){
-        //console.log('Você venceu!')
+        addingPointsFight(urlAdding, token, dataChallenged.studant_id);
         addTextResult('Parabéns! você venceu.');
         divDefeatDuel(divDefeatOpp);
     } else {
-        //console.log('Seu oponente venceu!')
+        addingPointsFight(urlAdding, token, dataOpponent.studant_id);
         addTextResult('Derrota! seu oponente venceu.');
         divDefeatDuel(divDefeatChal);
     }
@@ -171,7 +172,6 @@ const removeEnergy = (url, token) => {
     });
 
     $(document).ready(function () {
-
            $.ajax({
                url: url,
                type: 'get',
@@ -179,5 +179,30 @@ const removeEnergy = (url, token) => {
            });
     });
 }
+
+// add points fight
+const addingPointsFight = (url, token, id) => {
+
+    // id
+    let data = {'id': id};
+
+    $.ajaxSetup({
+        headers: {
+            'X-CSRF-TOKEN': token,
+        }
+    });
+
+    $.ajax({
+        url: url,
+        type: 'post',
+        data: data,
+        dataType: 'json',
+        success: function (response) {
+            console.log(response);
+        }
+    });
+
+}
+
 
 

@@ -20,9 +20,17 @@ class AccessPagesDuel
         $id_user = Auth::id();
         $character = Character::where('studant_id', $id_user)->first();
 
+        // energy did not have to be less than or equal to zero - RF 07
         if($character->energy == 0)
         {
             toastr()->error('Sua energia acabou volte amanhã!');
+            return redirect()->route('studant.character');
+        }
+
+        // points must be greater than 5 - RF 07
+        if($character->points < 4)
+        {
+            toastr()->warning('Responda as Questões, liberado se tiver mais que 5 pontos!');
             return redirect()->route('studant.character');
         }
 

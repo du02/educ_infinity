@@ -96,11 +96,13 @@
                                    <thead class="font-weight-bold text-center">
                                    <td>Poder</td>
                                    <td>Pontos</td>
+                                   <td>Classificação</td>
                                    </thead>
                                    <tbody class="text-center">
                                    <tr>
                                        <td>{{ $myCharacter[0]->power }}</td>
                                        <td>{{ $myCharacter[0]->points }}</td>
+                                       <td>{{ $myCharacter[0]->fight }}</td>
                                    </tr>
                                    </tbody>
                                </table>

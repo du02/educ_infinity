@@ -91,6 +91,7 @@ Route::middleware(['auth', 'access.pages.duel'])->group(function(){
 
         Route::get('duels', 'Studant\\BattlesController@index')->name('studant.battles');
         Route::get('remove-energy', 'Studant\\BattlesController@removeEnery')->name('studant.energy');
+        Route::post('adding-points-fight', 'Studant\\BattlesController@pointsFight')->name('studant.points.fight');
 
     });
 });
