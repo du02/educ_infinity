@@ -94,9 +94,9 @@
                            <div class="ml-2 table-responsive">
                                <table class="table border shadow">
                                    <thead class="font-weight-bold text-center">
-                                   <td>Poder</td>
-                                   <td>Pontos</td>
-                                   <td>Classificação</td>
+                                   <td>Pont. Poder</td>
+                                   <td>Pont. Questões</td>
+                                   <td>Pont. Classificação</td>
                                    </thead>
                                    <tbody class="text-center">
                                    <tr>

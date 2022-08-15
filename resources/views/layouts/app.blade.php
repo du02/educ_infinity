@@ -135,5 +135,6 @@
 
     <!-- My-Scripts -->
     <script src="{{ asset('js/duels_logic.js') }}"></script>
+    <script src="{{ asset('js/question_on.js') }}"></script>
 </body>
 </html>
