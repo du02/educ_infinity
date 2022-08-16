@@ -4,8 +4,8 @@
     <div class="container">
         <div class="row card border border-dark mt-4 my-shadow">
             <div class="d-flex align-items-center card-header card-header-color mb-3 border-bottom border-dark">
-                <i class="fa-solid fa-plus"></i>
-                <h4 class="ml-2 mt-2">Adicionar Questões</h4>
+                <i class="fa-solid fa-pen-to-square"></i>
+                <h4 class="ml-2 mt-2">Editar Questões</h4>
             </div>
             <div class="body m-4">
                 <form enctype="multipart/form-data" class="needs-validation" action="{{ route('teacher.questions.update', $question->id) }}" method="POST">

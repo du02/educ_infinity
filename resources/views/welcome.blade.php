@@ -37,7 +37,17 @@
             .top-right {
                 position: absolute;
                 right: 10px;
+                top: 30px;
+            }
+
+            .top-left {
+                position: absolute;
+                left: 10px;
                 top: 18px;
+            }
+
+            .logo {
+                width: 60px;
             }
 
             .content {
@@ -49,8 +59,7 @@
             }
 
             .links > a {
-                color: #636b6f;
-                padding: 0 25px;
+                padding: 10px;
                 font-size: 13px;
                 font-weight: 600;
                 letter-spacing: .1rem;
@@ -61,27 +70,70 @@
             .m-b-md {
                 margin-bottom: 30px;
             }
+            h2 {
+                margin-top: 100px;
+                color: #352D42;
+            }
+            .footer {
+                position: absolute;
+                bottom: 5px;
+            }
+
+            .login {
+                border: 1px solid #636b6f;
+                border-radius: 5px;
+                background-color: #636b6f;
+                color: #fff;
+            }
+            .sub {
+                margin-right: 15px;
+            }
+
         </style>
     </head>
     <body>
         <div class="flex-center position-ref full-height">
             @if (Route::has('login'))
+                <div class="top-left">
+                    <a class="navbar-brand" href="{{ url('/') }}">
+                        <img src="{{ asset('assets/img/logo/logo.png') }}" class="logo" alt="Logo">
+                    </a>
+                </div>
                 <div class="top-right links">
                     @auth
                         <a href="{{ url('/home') }}">Home</a>
                     @else
-                        <a href="{{ route('login') }}">Professor</a>
-                        <a href="{{ route('login') }}">Aluno</a>
+                        <a href="{{ route('login') }}" class="sub">Como jogar</a>
+                        <a href="{{ route('login') }}" class="login">Login</a>
 
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Register</a>
-                        @endif
+                        @php
+                            /*
+                            @if (Route::has('register'))
+                                <a href="{{ route('register') }}">Criar Conta</a>
+                            @endif
+                            */
+                        @endphp
                     @endauth
                 </div>
             @endif
 
             <div class="content">
+                <div class="hero">
+                    <div>
+                        <img src="{{ asset('assets/img/logo/logo.png') }}" class="" alt="Logo">
+                        <h2>
+                            AQUI VOCÊ REVISA O CONTÉUDO
+                            <br>
+                            ESCOLAR E JOGA AO
+                            <br>
+                            MESMO TEMPO!
+                        </h2>
+                    </div>
+                </div>
 
+                <div class="footer">
+                    Todos direitos reservados ao desenvolvedor | Unicesumar - Eduardoo Ferreira
+                </div>
             </div>
         </div>
     </body>

@@ -70,7 +70,7 @@
                                 <a class="nav-link" href="{{ route('studant.character') }}">Personagem</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('studant.questions') }}">Questões</a>
+                                <a class="nav-link" href="{{ route('studant.questions') }}">Treino</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('studant.battles') }}">Duelos</a>
@@ -88,7 +88,7 @@
                         </li>
                         @if (Route::has('register'))
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                <a class="nav-link" href="{{ route('register') }}">{{ __('Criar Conta') }}</a>
                             </li>
                         @endif
                     @else
@@ -98,7 +98,7 @@
                             </a>
 
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown" id="dropdown-show">
-                                <a class="dropdown-item" href="">
+                                <a class="dropdown-item" href="{{ route('profile') }}">
                                     <i class="fa-solid fa-user"></i>
                                     {{ __('Perfil') }}
                                 </a>

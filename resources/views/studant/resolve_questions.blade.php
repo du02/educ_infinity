@@ -49,10 +49,10 @@
                                             <p>D - {{ $q->option_question_d }}</p>
                                             <p>E - {{ $q->option_question_e }}</p>
                                             <p
-                                                class="invisible border border-success"
+                                                class="invisible border border-success font-weight-bold"
                                                 id="question_on_{{ $loop->iteration }}"
                                             >
-                                                {{$q->question_correct}}
+                                                RESPOSTA CORRETA É: {{$q->question_correct}}
                                             </p>
                                         </div>
                                         <div class="col-md-12 mb-3 row justify-content-end">

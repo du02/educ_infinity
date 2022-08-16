@@ -22,6 +22,9 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::middleware(['auth', 'access.pages.admin'])->group(function(){
     Route::prefix('admin')->group(function(){
 
+        // admin/profile
+        Route::get('profile', 'Admin\\ProfileController@index')->name('profile');
+
         // admin/reset/energy
         Route::get('reset/energy', 'Admin\\ResertEnergyDuelController@resetEnergy')->name('reset.energy');
 
@@ -55,6 +58,9 @@ Route::middleware(['auth', 'access.pages.admin'])->group(function(){
 Route::middleware(['auth'])->group(function(){
     Route::prefix('teacher')->group(function(){
 
+        // profile
+        Route::get('profile', 'Admin\\ProfileController@index')->name('profile');
+
         // teacher/questions
         Route::get('questions', 'Teacher\\QuestionController@index')->name('teacher.questions.index');
         Route::get('questions/create', 'Teacher\\QuestionController@create')->name('teacher.questions.create');
@@ -67,6 +73,9 @@ Route::middleware(['auth'])->group(function(){
 
 Route::middleware(['auth'])->group(function(){
     Route::prefix('studant')->group(function(){
+
+        // profile
+        Route::get('profile', 'Admin\\ProfileController@index')->name('profile');
 
         Route::get('home', 'Studant\\CharacterController@index')->name('studant.home');
         Route::get('character', 'Studant\\CharacterController@character')->name('studant.character');

@@ -34,7 +34,7 @@
                                     <td>{{ $question->updated_at }}</td>
                                     <td class="text-right">
                                         <a class="btn my-btn-edit border border-dark mr-1" href="{{ route('teacher.questions.edit', $question->id) }}"><i class="fa-solid fa-pen-to-square mr-2"></i>Editar</a>
-                                        <a class="btn my-btn-delete border border-dark ml-1" href="{{ route('teacher.questions.destroy', $question->id) }}"><i class="fa-solid fa-trash mr-2"></i>Excluir</a>
+                                        <a id="button-delete" class="btn my-btn-delete border border-dark ml-1" href="{{ route('teacher.questions.destroy', $question->id) }}"><i class="fa-solid fa-trash mr-2"></i>Excluir</a>
                                     </td>
                                 </tr>
                             @endforeach

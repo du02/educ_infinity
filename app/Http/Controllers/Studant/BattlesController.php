@@ -32,7 +32,7 @@ class BattlesController extends Controller
         $data = $this->resortOpponent($my_character_îd, $rand);
 
         return view('studant/duels', compact('data'));
-        return response()->json($data);
+        //return response()->json($data);
 
     }
 
