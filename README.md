@@ -8,12 +8,12 @@ OBS: Sistema web em desenvolvimento, utilizando o framework **Laravel 6** e Boot
 
 
 - [ ] Layoult Home (Em desenvolvimento);
-- [ ] Layoult Login (Concluído);
+- [x] Layoult Login (Concluído);
 - [x] Layoult Page teacher - CRUD | ADMN (Concluído);
 - [x] Layoult Page Studant - CRUD | ADMIN (Concluído);
-- [ ] Layoult Page Question - CRUD | ADMIN (Em desenvolvimento);
-- [ ] Layoult Teachers (Em desenvolvimento);
-- [ ] Layoult Studants (Em desenvolvimento);
+- [x] Layoult Page Question - CRUD | ADMIN (Concluído);
+- [x] Layoult Teachers (Concluído);
+- [x] Layoult Studants (Concluído);
 - [x] Sistema de login (Concluído);
 - [ ] Outras funções (Em breve);
 
