@@ -40,7 +40,7 @@ Studant List
 Create Question
 ![admin-questions-edit](https://user-images.githubusercontent.com/40076527/204848381-ede74a38-a7a7-4c1f-b6ba-c8846cf34d0a.png)
 
-Resilve Questions
+Resolve Questions
 ![studant-trein](https://user-images.githubusercontent.com/40076527/204849175-a3a37dc4-78b3-44e2-b049-8957e116993f.png)
 
 Duels
